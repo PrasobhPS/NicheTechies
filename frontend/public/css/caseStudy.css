@@ -1,0 +1,890 @@
+/* =========================================================================
+   Case Studies Page Stylesheet
+   Niche Techies - Enterprise Work & Client Transformations
+   Compiled from src/scss/caseStudy.scss
+   ========================================================================= */
+
+.casestudy-page-main {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+
+/* Common Container - Matches .header-container and .contact-container exactly (1440px / 3.5rem padding) */
+.casestudy-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .casestudy-container {
+    padding: 0 3.5rem;
+  }
+}
+
+/* =========================================================================
+   1. Case Study Hero Section ("Case Studies. Real Impact.")
+   Banner Hero matching About Page Design System
+   ========================================================================= */
+.casestudy-hero-section {
+  position: relative;
+  background-color: #060e1d;
+  background-image: 
+    linear-gradient(90deg, 
+      rgba(255, 255, 255, 1) 0%, 
+      rgba(255, 255, 255, 0.98) 28%, 
+      rgba(255, 255, 255, 0.78) 40%, 
+      rgba(255, 255, 255, 0.22) 52%, 
+      transparent 62%
+    ),
+    linear-gradient(90deg, 
+      transparent 35%, 
+      rgba(15, 28, 58, 0.16) 55%, 
+      rgba(10, 21, 46, 0.4) 75%, 
+      rgba(6, 14, 32, 0.65) 100%
+    ),
+    url('../assets/images/casestudy-banner.jpeg');
+  background-position: right center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  padding: 8.5rem 0 5rem;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1400px) {
+  .casestudy-hero-section {
+    padding: 9rem 0 5.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .casestudy-hero-section {
+    background-image: 
+      linear-gradient(90deg, 
+        rgba(255, 255, 255, 1) 0%, 
+        rgba(255, 255, 255, 0.98) 36%, 
+        rgba(255, 255, 255, 0.72) 50%, 
+        transparent 65%
+      ),
+      linear-gradient(90deg, 
+        transparent 30%, 
+        rgba(15, 28, 58, 0.22) 55%, 
+        rgba(6, 14, 32, 0.6) 100%
+      ),
+      url('../assets/images/casestudy-banner.jpeg');
+    background-position: 75% center;
+    padding: 7.5rem 0 4.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .casestudy-hero-section {
+    background-image: 
+      linear-gradient(180deg, rgba(255, 255, 255, 0.99) 0%, rgba(255, 255, 255, 0.96) 55%, rgba(240, 245, 252, 0.92) 85%, #f4f7fb 100%),
+      url('../assets/images/casestudy-banner.jpeg');
+    background-position: center center;
+    padding: 6.75rem 0 3.5rem;
+  }
+}
+
+.casestudy-hero-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+/* Left Content Column */
+.casestudy-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 620px;
+}
+
+/* Eyebrow */
+.casestudy-hero-eyebrow {
+  display: inline-block;
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #64748b;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.casestudy-hero-title {
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(1.85rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #0c1524;
+  margin-bottom: 0.85rem;
+}
+
+.casestudy-hero-desc {
+  font-size: clamp(0.92rem, 1.1vw, 1.02rem);
+  line-height: 1.68;
+  color: #475569;
+  margin-bottom: 1.85rem;
+  max-width: 540px;
+}
+
+/* Action Buttons */
+.casestudy-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.btn-casestudy-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.68rem 1.5rem;
+  border-radius: 9999px;
+  background: #0f172a;
+  color: #ffffff !important;
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 14px -2px rgba(15, 23, 42, 0.2);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-casestudy-primary:hover {
+  background: #1e293b;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px -3px rgba(15, 23, 42, 0.3);
+}
+
+.btn-casestudy-primary svg {
+  transition: transform 0.25s ease;
+}
+
+.btn-casestudy-primary:hover svg {
+  transform: translateX(3px);
+}
+
+.btn-casestudy-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.68rem 1.45rem;
+  border-radius: 9999px;
+  border: 1.5px solid rgba(15, 23, 42, 0.2);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  color: #0f172a !important;
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-casestudy-secondary:hover {
+  background: #ffffff;
+  border-color: #0f172a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px -4px rgba(15, 23, 42, 0.12);
+}
+
+.btn-casestudy-secondary svg {
+  transition: transform 0.25s ease;
+}
+
+.btn-casestudy-secondary:hover svg {
+  transform: translateY(2px);
+}
+
+/* =========================================================================
+   2. Key Metrics Strip Section
+   ========================================================================= */
+.casestudy-stats-section {
+  padding: 2.75rem 0 3rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #f1f5f9;
+  position: relative;
+  z-index: 2;
+}
+
+/* Horizontal Key Metrics Strip (4 Columns) */
+.casestudy-hero-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 1.5rem;
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .casestudy-hero-stats {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+.casestudy-hero-stats .stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.casestudy-hero-stats .stat-item .stat-number {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: clamp(2rem, 2.75vw, 2.7rem);
+  font-weight: 800;
+  color: #0c1524;
+  line-height: 1;
+  letter-spacing: -0.035em;
+}
+
+.casestudy-hero-stats .stat-item .stat-label {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #475569;
+  letter-spacing: 0.01em;
+}
+
+.casestudy-hero-stats .stat-item .stat-subtext {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.8125rem;
+  color: #64748b;
+  font-weight: 500;
+  margin-top: 0.2rem;
+}
+
+.casestudy-hero-stats .stat-item .stat-subtext svg {
+  color: #0d9488;
+  flex-shrink: 0;
+}
+
+.casestudy-hero-stats .stat-divider {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .casestudy-hero-stats .stat-divider {
+    display: block;
+    width: 1px;
+    height: 48px;
+    background: #e2e8f0;
+    margin-top: 0.35rem;
+  }
+}
+
+/* =========================================================================
+   2. Filter Section & Category Pills
+   ========================================================================= */
+.casestudy-filter-section {
+  padding: 3rem 0 5rem;
+  background-color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .casestudy-filter-section {
+    padding: 3.5rem 0 6rem;
+  }
+}
+
+.casestudy-filter-section .filter-bar-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.75rem;
+}
+
+@media (min-width: 1024px) {
+  .casestudy-filter-section .filter-bar-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* Filter Tabs Pill List */
+.casestudy-filter-section .category-pills-list {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+@media (max-width: 767px) {
+  .casestudy-filter-section .category-pills-list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+    padding: 0.25rem 1.25rem 0.75rem;
+  }
+
+  .casestudy-filter-section .category-pills-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .casestudy-filter-section .category-pills-list .category-pill-btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 0.6rem 1.25rem;
+    font-size: 0.85rem;
+  }
+
+  .casestudy-filter-section .category-pills-list::after {
+    content: '';
+    flex: 0 0 0.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .casestudy-filter-section .category-pills-list {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+}
+
+.casestudy-filter-section .category-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.35rem;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #475569;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.casestudy-filter-section .category-pill-btn:hover:not(.active) {
+  color: #0c1524;
+  border-color: #cbd5e1;
+  background-color: #f8fafc;
+  transform: translateY(-1px);
+}
+
+.casestudy-filter-section .category-pill-btn.active {
+  background-color: #0c1524;
+  border-color: #0c1524;
+  color: #ffffff;
+  box-shadow: 0 4px 14px -2px rgba(12, 21, 36, 0.25);
+  cursor: default;
+}
+
+/* Result Count Feedback */
+.casestudy-filter-section .filter-feedback {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.casestudy-filter-section .filter-feedback strong {
+  color: #0c1524;
+  font-weight: 700;
+}
+
+/* =========================================================================
+   3. Case Studies Cards Grid (Exact 2-Column Horizontal Inner Layout)
+   ========================================================================= */
+.cases-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .cases-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.25rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .cases-grid {
+    gap: 2.5rem;
+  }
+}
+
+/* Individual Case Card */
+.case-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid #edf2f7;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.04);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+@media (min-width: 640px) {
+  .case-card {
+    flex-direction: row;
+  }
+}
+
+.case-card:hover {
+  transform: translateY(-4px);
+  border-color: #cbd5e1;
+  box-shadow: 0 20px 35px -10px rgba(15, 23, 42, 0.08), 0 10px 15px -5px rgba(15, 23, 42, 0.04);
+}
+
+.case-card:hover .case-card-visual img {
+  transform: scale(1.05);
+}
+
+.case-card:hover .case-card-title a {
+  color: #1a2b4b;
+}
+
+.case-card:hover .case-card-cta {
+  color: #1a2b4b;
+}
+
+.case-card:hover .case-card-cta svg {
+  transform: translateX(4px);
+}
+
+/* Left Side: Thumbnail Visual */
+.case-card .case-card-visual {
+  width: 100%;
+  height: 230px;
+  position: relative;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  flex-shrink: 0;
+}
+
+@media (min-width: 640px) {
+  .case-card .case-card-visual {
+    width: 44%;
+    height: auto;
+    min-height: 280px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .case-card .case-card-visual {
+    width: 42%;
+  }
+}
+
+.case-card .case-card-visual a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.case-card .case-card-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Floating Category Tag Badge */
+.case-card .case-card-visual .card-category-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Right Side: Content Body */
+.case-card .case-card-body {
+  width: 100%;
+  padding: 1.75rem 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: 640px) {
+  .case-card .case-card-body {
+    width: 56%;
+    padding: 2rem 2rem 1.75rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .case-card .case-card-body {
+    width: 58%;
+    padding: 2.25rem 2.25rem 2rem;
+  }
+}
+
+/* Card Header: Title + Big Gray Index Number */
+.case-card .case-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.case-card .case-card-header .case-card-title {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #0c1524;
+  margin: 0;
+}
+
+@media (min-width: 1280px) {
+  .case-card .case-card-header .case-card-title {
+    font-size: 1.35rem;
+  }
+}
+
+.case-card .case-card-header .case-card-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.case-card .case-card-header .case-card-number {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #cbd5e1;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+}
+
+/* Excerpt */
+.case-card .case-card-excerpt {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.90625rem;
+  line-height: 1.62;
+  color: #64748b;
+  margin: 0 0 1.25rem;
+  flex-grow: 1;
+}
+
+/* View Case Study CTA Link */
+.case-card .case-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0c1524;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+  transition: color 0.2s ease;
+}
+
+.case-card .case-card-cta svg {
+  transition: transform 0.25s ease;
+}
+
+/* Bottom Metadata Row: Industry & Timeline */
+.case-card .case-card-meta {
+  border-top: 1px solid #f1f5f9;
+  padding-top: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.case-card .case-card-meta .meta-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.case-card .case-card-meta .meta-col .meta-label {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.case-card .case-card-meta .meta-col .meta-val {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+/* Hidden Card Utility for Filter Animation */
+.case-card.hidden-card {
+  display: none !important;
+}
+
+/* =========================================================================
+   4. Empty State Container
+   ========================================================================= */
+.cases-empty-state {
+  text-align: center;
+  padding: 5rem 1.5rem;
+  display: none;
+  grid-column: 1 / -1;
+}
+
+.cases-empty-state.active {
+  display: block;
+}
+
+.cases-empty-state .empty-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 1.25rem;
+  color: #94a3b8;
+}
+
+.cases-empty-state h3 {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0c1524;
+  margin-bottom: 0.5rem;
+}
+
+.cases-empty-state p {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #64748b;
+  font-size: 0.9375rem;
+  margin-bottom: 1.5rem;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cases-empty-state .btn-reset-cases {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.35rem;
+  background-color: #0c1524;
+  color: #ffffff;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.cases-empty-state .btn-reset-cases:hover {
+  background-color: #1a2b4b;
+  transform: translateY(-1px);
+}
+
+/* =========================================================================
+   5. Bottom CTA Strip (Leading to Contact Section)
+   ========================================================================= */
+.casestudy-cta-strip {
+  background-color: #f8fafc;
+  border-top: 1px solid #edf2f7;
+  padding: 4.5rem 0;
+  text-align: center;
+}
+
+.casestudy-cta-strip .cta-strip-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.casestudy-cta-strip .cta-strip-eyebrow {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #1a2b4b;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.casestudy-cta-strip .cta-strip-title {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0c1524;
+  letter-spacing: -0.02em;
+  margin: 0 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .casestudy-cta-strip .cta-strip-title {
+    font-size: 2.35rem;
+  }
+}
+
+.casestudy-cta-strip .cta-strip-desc {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #64748b;
+  margin: 0 0 2rem;
+}
+
+.casestudy-cta-strip .btn-strip-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.875rem 2rem;
+  background-color: #1a2b4b;
+  color: #ffffff;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px -2px rgba(26, 43, 75, 0.35);
+}
+
+.casestudy-cta-strip .btn-strip-action:hover {
+  background-color: #111d33;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -4px rgba(26, 43, 75, 0.45);
+}
+
+/* =========================================================================
+   6. Back To Top Floating Button
+   ========================================================================= */
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #0d192d;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(13, 25, 45, 0.28), 0 2px 6px rgba(13, 25, 45, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px) scale(0.92);
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.25s ease,
+              box-shadow 0.25s ease;
+  user-select: none;
+  padding: 0;
+  margin: 0;
+}
+
+.back-to-top.is-visible,
+.back-to-top.visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) scale(1) !important;
+  pointer-events: auto !important;
+}
+
+.back-to-top:hover {
+  background: #111d33;
+  transform: translateY(-4px) scale(1.04) !important;
+  box-shadow: 0 12px 30px rgba(26, 43, 75, 0.4), 0 4px 10px rgba(13, 25, 45, 0.16);
+}
+
+.back-to-top:active {
+  transform: translateY(-1px) scale(0.98) !important;
+}
+
+.back-to-top .progress-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 48px;
+  transform: rotate(-90deg);
+  pointer-events: none;
+}
+
+.back-to-top .progress-ring-bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.12);
+  stroke-width: 2.5;
+}
+
+.back-to-top .progress-ring-fill {
+  fill: none;
+  stroke: #c5d4ea;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.1s linear;
+}
+
+.back-to-top .back-to-top-icon {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  transition: transform 0.25s ease;
+}
+
+.back-to-top .back-to-top-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.back-to-top:hover .back-to-top-icon {
+  transform: translateY(-2px);
+}
+

@@ -1,0 +1,510 @@
+<!-- =========================================================================
+       2. Blog Details Main Container
+       ========================================================================= -->
+  <main class="blog-detail-main" id="main-content">
+
+    <!-- Article Header & Hero Section -->
+    <section class="article-hero-section">
+      <div class="blogdetail-container">
+        <!-- Breadcrumbs -->
+        <nav class="article-breadcrumbs" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span class="breadcrumb-sep">/</span>
+          <a href="/blog">Blog &amp; Insights</a>
+          <span class="breadcrumb-sep">/</span>
+          <a href="/blog">AI &amp; Machine Learning</a>
+          <span class="breadcrumb-sep">/</span>
+          <span class="breadcrumb-current" aria-current="page">AI in Software Development</span>
+        </nav>
+
+        <!-- Category Badge -->
+        <div class="article-category-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+          </svg>
+          <span>AI &amp; Machine Learning</span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="article-main-title">
+          AI in Software Development: How It's Transforming Modern Engineering
+        </h1>
+
+        <!-- Lead Paragraph -->
+        <p class="article-lead-excerpt">
+          From automated code generation to intelligent debugging and self-healing pipelines, discover how generative models and autonomous agents are reshaping how high-velocity engineering squads build software at scale.
+        </p>
+
+        <!-- Author & Publication Meta Bar -->
+        <div class="article-meta-bar">
+          <div class="article-author-info">
+            <img src="/assets/images/team-anoj.jpg" alt="Alexandre Mercer" class="author-avatar-img">
+            <div class="author-details">
+              <span class="author-name">Alexandre Mercer</span>
+              <span class="author-role">VP of AI &amp; Digital Engineering, Niche Techies</span>
+            </div>
+          </div>
+
+          <div class="article-publication-details">
+            <span>October 14, 2026</span>
+            <span class="meta-dot"></span>
+            <span>6 min read</span>
+            <span class="meta-dot"></span>
+            <span>Technical Deep Dive</span>
+          </div>
+
+          <div class="article-share-group">
+            <span class="share-label">Share:</span>
+            <a href="https://www.linkedin.com/sharing/share-offsite/" target="_blank" rel="noopener noreferrer"
+              class="share-btn" title="Share on LinkedIn" aria-label="Share on LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.45 1.45 0 0 0 1.45-1.45 1.45 1.45 0 0 0-1.45-1.45 1.45 1.45 0 0 0-1.45 1.45 1.45 1.45 0 0 0 1.45 1.45m1.37 9.74v-8.37H5.09v8.37h2.74z" />
+              </svg>
+            </a>
+            <a href="https://twitter.com/intent/tweet" target="_blank" rel="noopener noreferrer" class="share-btn"
+              title="Share on X" aria-label="Share on X">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+            <button type="button" class="share-btn" id="btn-copy-link" title="Copy article link" aria-label="Copy article link">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Featured Banner Image -->
+        <div class="article-featured-image-wrap">
+          <img src="/assets/images/blog-ai-engineering.jpg"
+            alt="AI in Software Development: Transforming Modern Engineering" loading="eager">
+          <div class="image-caption">
+            Figure 1: Architectural evolution from manual coding loops to collaborative human-in-the-loop autonomous agent squads.
+          </div>
+        </div>
+
+        <!-- Two-Column Editorial Layout (Main Content + Sticky Sidebar) -->
+        <div class="blog-detail-grid">
+          <!-- Left Column: Article Body Content -->
+          <article class="article-body-content">
+            <!-- Executive Key Takeaways Callout -->
+            <div class="executive-takeaways-card">
+              <div class="takeaways-header">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
+                </svg>
+                <h3>Executive Summary &amp; Key Findings</h3>
+              </div>
+              <ul>
+                <li><strong>Velocity Multiplier:</strong> Cross-functional software squads leveraging autonomous AI agents complete sprint epics 35% to 45% faster than teams relying solely on traditional IDE setups.</li>
+                <li><strong>Cognitive Shift:</strong> Senior engineers are pivoting away from boilerplate syntax towards high-leverage architectural orchestration, distributed systems resilience, and API contract design.</li>
+                <li><strong>Zero-Trust Governance:</strong> Enterprise AI adoption succeeds when grounded in air-gapped LLM gateways, deterministic static analysis, and rigorous regression benchmarks.</li>
+              </ul>
+            </div>
+
+            <!-- Section 1 -->
+            <h2 id="paradigm-shift">1. The Paradigm Shift: From Code Copilots to Autonomous Agents</h2>
+            <p>
+              Over the past three decades, the software engineering discipline has experienced distinct waves of abstraction — from assembly to high-level programming languages, from bare-metal servers to cloud containerization, and now, from manual typing to <strong>autonomous agentic synthesis</strong>.
+            </p>
+            <p>
+              Early generative tools acted merely as tab-completion copilots, suggesting single lines of code or boilerplates inside the editor. While helpful, their impact was localized. In 2026, the industry has transitioned into the era of <strong>autonomous multi-agent orchestration</strong>. Instead of assisting with syntax, modern AI systems act as specialized virtual team members: one agent reviews the user story, a second generates the database migration scripts, a third synthesizes the GraphQL schema, and a fourth authors comprehensive integration test suites.
+            </p>
+
+            <!-- Pullquote -->
+            <div class="article-pullquote">
+              <blockquote>
+                "AI will not replace software engineers. However, engineering organizations that master autonomous agentic workflows will fundamentally outpace and outperform those that continue writing every line of boilerplate by hand."
+              </blockquote>
+              <div class="quote-author">
+                Dr. Maya Chen <span>— Principal Systems Architect, Niche Techies</span>
+              </div>
+            </div>
+
+            <p>
+              At Niche Techies, our engineering pods deploy these workflows daily across fintech, healthcare, and logistics engagements. By offloading mechanical tasks to deterministic AI pipelines, our senior engineers spend their energy where it matters most: business domain alignment, boundary modeling, zero-downtime database strategies, and end-to-end data security.
+            </p>
+
+            <!-- Section 2 -->
+            <h2 id="architecture-pipeline">2. Real-World Architecture: Integrating Agentic LLMs into CI/CD Pipelines</h2>
+            <p>
+              The most profound impact of AI occurs when it is treated not as a standalone chatbot, but as an integral node within the continuous integration and delivery lifecycle. When an engineer opens a pull request, automated agent pipelines can perform semantic diff reviews, identify regression anomalies, and generate missing boundary test cases before any human reviewer intervenes.
+            </p>
+
+            <!-- Code Block Breakout -->
+            <div class="article-code-block">
+              <div class="code-header">
+                <span class="code-title">pipeline-agent-verification.ts</span>
+                <button type="button" class="btn-copy-code" id="btn-copy-code" aria-label="Copy code snippet">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                  </svg>
+                  <span>Copy</span>
+                </button>
+              </div>
+              <pre><code><span class="code-comment">// Enterprise Agentic CI Verification Pipeline</span>
+<span class="code-keyword">import</span> { AgentOrchestrator, SecurityAuditor } <span class="code-keyword">from</span> <span class="code-string">'@niche/agent-core'</span>;
+
+<span class="code-keyword">export async function</span> <span class="code-function">verifyPullRequest</span>(prPayload: PullRequest): <span class="code-variable">Promise&lt;AuditReport&gt;</span> {
+  <span class="code-comment">// 1. Initialize air-gapped deterministic LLM sandbox</span>
+  <span class="code-keyword">const</span> orchestrator = <span class="code-keyword">new</span> <span class="code-function">AgentOrchestrator</span>({
+    model: <span class="code-string">'claude-3-7-sonnet-enterprise'</span>,
+    temperature: <span class="code-keyword">0.0</span>, <span class="code-comment">// Deterministic execution</span>
+    securityContext: prPayload.repository.securityRules
+  });
+
+  <span class="code-comment">// 2. Execute parallel AST semantic verification &amp; synthetic test synthesis</span>
+  <span class="code-keyword">const</span> [codeReview, securityScan, generatedTests] = <span class="code-keyword">await</span> Promise.<span class="code-function">all</span>([
+    orchestrator.<span class="code-function">analyzeSemantics</span>(prPayload.diff),
+    SecurityAuditor.<span class="code-function">detectVulnerabilities</span>(prPayload.diff),
+    orchestrator.<span class="code-function">synthesizeBoundaryTests</span>(prPayload.targetFiles)
+  ]);
+
+  <span class="code-keyword">return</span> {
+    approved: securityScan.zeroCritical &amp;&amp; codeReview.qualityScore &gt;= <span class="code-keyword">95</span>,
+    syntheticCoverage: generatedTests.coverageRatio,
+    generatedArtifacts: generatedTests.testFiles
+  };
+}</code></pre>
+            </div>
+
+            <p>
+              By structuring AI pipelines with a temperature of <code>0.0</code> and feeding exact AST (Abstract Syntax Tree) representations alongside pull requests, hallucination risk is eliminated from the feedback loop. The result is a resilient gatekeeper that elevates software quality before code ever touches staging environments.
+            </p>
+
+            <!-- Comparison Table -->
+            <h3 id="workflow-comparison">Workflow Comparison: Traditional vs. Agentic Engineering</h3>
+            <div class="article-table-wrap">
+              <table class="article-table">
+                <thead>
+                  <tr>
+                    <th>Engineering Phase</th>
+                    <th>Traditional Workflow</th>
+                    <th>Niche Techies Agentic Model</th>
+                    <th>Net Velocity Gain</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>API &amp; Contract Scaffolding</strong></td>
+                    <td>Manual typing of DTOs, schemas, and serializers</td>
+                    <td>Prompt-synthesized OpenAPI specs with strict typing</td>
+                    <td><strong>+60% Faster</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Unit &amp; Integration Tests</strong></td>
+                    <td>Often deferred due to tight delivery timelines</td>
+                    <td>Autonomous boundary test synthesis with 90%+ coverage</td>
+                    <td><strong>+75% Coverage</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Legacy Code Modernization</strong></td>
+                    <td>Weeks spent manually mapping monolithic dependencies</td>
+                    <td>Automated AST refactoring to modular microservices</td>
+                    <td><strong>3.5x Acceleration</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Documentation &amp; Runbooks</strong></td>
+                    <td>Outdated Confluence pages and undocumented routes</td>
+                    <td>Living, self-updating markdown documentation in git</td>
+                    <td><strong>Real-Time Sync</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Section 3 -->
+            <h2 id="security-governance">3. Mitigating Enterprise Risks: Hallucinations, IP &amp; Zero-Trust Governance</h2>
+            <p>
+              While the productivity upside is undeniable, enterprises cannot blindly adopt generative AI without addressing legitimate security concerns. CTOs must navigate data privacy, proprietary codebase leakage, licensing compliance, and subtle logic hallucinations.
+            </p>
+            <p>
+              To solve these enterprise constraints, Niche Techies enforces a <strong>Three-Pillar Security Framework</strong> across all client projects:
+            </p>
+            <ol>
+              <li>
+                <strong>Air-Gapped Private Endpoints:</strong> Client code never trains public foundation models. All AI interactions occur via enterprise agreements with zero data-retention policies or on-premise private weights.
+              </li>
+              <li>
+                <strong>Deterministic AST Verification:</strong> AI-generated code is automatically compiled, linted, and run through static vulnerability scanners (e.g., SonarQube, Snyk) before human review. Code that does not compile is immediately regenerated or rejected.
+              </li>
+              <li>
+                <strong>Synthetic Test-Driven Validation:</strong> Every feature prompt must generate corresponding unit and integration test assertions first. The code is only accepted if it passes the generated test suite without exceptions.
+              </li>
+            </ol>
+
+            <!-- Section 4 -->
+            <h2 id="cto-playbook">4. The CTO Playbook: 4 Steps to Modernize Your Engineering Squad in 2026</h2>
+            <p>
+              Transitioning an enterprise engineering department to an AI-accelerated delivery model requires deliberate cultural and technical choreography. Here is the blueprint we recommend for CTOs and engineering directors:
+            </p>
+            <ul>
+              <li><strong>Step 1: Audit Developer Friction Points.</strong> Identify repetitive toil — such as writing boilerplate CRUD handlers, creating mock fixtures, or diagnosing obscure build failures — and target those first for agentic automation.</li>
+              <li><strong>Step 2: Establish Prompt Engineering Standards.</strong> Treat system prompts as software configuration. Maintain a version-controlled repository of enterprise coding standards and context prompts.</li>
+              <li><strong>Step 3: Pair Junior Engineers with Senior Orchestrators.</strong> AI tools lower the barrier to entry, but senior architectural oversight is critical to prevent code sprawl and architectural fragmentation.</li>
+              <li><strong>Step 4: Measure What Truly Matters.</strong> Focus on business outcome metrics: Mean Time to Production (MTTP), change failure rates, and customer sprint velocity, rather than arbitrary lines-of-code counts.</li>
+            </ul>
+
+            <p>
+              The teams that lead their industries in 2026 and beyond are not the ones resisting AI adoption, nor the ones blindly replacing human talent with chatbots. They are the forward-thinking organizations that equip exceptional engineers with powerful, governed autonomous workflows to build world-class digital solutions in record time.
+            </p>
+
+            <!-- Article Tags Row -->
+            <div class="article-tags-wrap">
+              <span class="tags-label">Related Topics:</span>
+              <a href="/blog" class="tag-pill">#ArtificialIntelligence</a>
+              <a href="/blog" class="tag-pill">#MachineLearning</a>
+              <a href="/blog" class="tag-pill">#DevOps</a>
+              <a href="/blog" class="tag-pill">#SoftwareArchitecture</a>
+              <a href="/blog" class="tag-pill">#EnterpriseTech</a>
+              <a href="/blog" class="tag-pill">#CloudNative</a>
+            </div>
+
+            <!-- Author Full Bio Card -->
+            <div class="article-author-card">
+              <img src="/assets/images/team-anoj.jpg" alt="Alexandre Mercer" class="author-card-avatar">
+              <div class="author-card-info">
+                <h3 class="author-card-name">Alexandre Mercer</h3>
+                <div class="author-card-role">VP of AI &amp; Digital Engineering at Niche Techies</div>
+                <p class="author-card-bio">
+                  Alexandre has over 15 years of experience architecting large-scale distributed systems and enterprise software platforms. He leads Niche Techies' AI engineering practice, helping global organizations modernize legacy systems and deploy agentic workflows in production.
+                </p>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="author-social-link">
+                  <span>Connect on LinkedIn</span>
+                  <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.8"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Previous / Next Article Navigation -->
+            <div class="article-prev-next-nav">
+              <a href="/blog/details" class="nav-card">
+                <span class="nav-label">&larr; Previous Article</span>
+                <h4 class="nav-title">Why Custom Software Gives Businesses a Competitive Advantage</h4>
+              </a>
+              <a href="/blog/details" class="nav-card">
+                <span class="nav-label">Next Article &rarr;</span>
+                <h4 class="nav-title">Why DevOps and Cloud Engineering Are Essential for Modern Businesses</h4>
+              </a>
+            </div>
+          </article>
+
+          <!-- Right Column: Sticky Sidebar -->
+          <aside class="blog-detail-sidebar" aria-label="Article Sidebar">
+            <!-- Table of Contents -->
+            <div class="sidebar-toc-card">
+              <h3 class="toc-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <line x1="8" y1="6" x2="21" y2="6" />
+                  <line x1="8" y1="12" x2="21" y2="12" />
+                  <line x1="8" y1="18" x2="21" y2="18" />
+                  <line x1="3" y1="6" x2="3.01" y2="6" />
+                  <line x1="3" y1="12" x2="3.01" y2="12" />
+                  <line x1="3" y1="18" x2="3.01" y2="18" />
+                </svg>
+                <span>On This Page</span>
+              </h3>
+              <ul class="toc-list" id="toc-list">
+                <li><a href="#paradigm-shift" class="toc-link active">1. The Paradigm Shift</a></li>
+                <li><a href="#architecture-pipeline" class="toc-link">2. Real-World Architecture</a></li>
+                <li><a href="#workflow-comparison" class="toc-link">Workflow Comparison</a></li>
+                <li><a href="#security-governance" class="toc-link">3. Security &amp; Governance</a></li>
+                <li><a href="#cto-playbook" class="toc-link">4. The 2026 CTO Playbook</a></li>
+              </ul>
+            </div>
+
+            <!-- Strategy Consultation CTA Card -->
+            <div class="sidebar-cta-card">
+              <span class="cta-badge">Engineering Advisory</span>
+              <h3 class="cta-title">Planning an AI-driven transformation?</h3>
+              <p class="cta-desc">
+                Our senior engineering squads help enterprises architect, build, and deploy production-grade agentic AI systems with zero technical debt.
+              </p>
+              <a href="/contact" class="btn-sidebar-cta">
+                <span>Book a Strategy Session</span>
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- Trending Articles Card -->
+            <div class="sidebar-trending-card">
+              <h3 class="trending-title">Trending Perspectives</h3>
+
+              <a href="/blog/details" class="trending-item">
+                <img src="/assets/images/blog-custom-software.jpg" alt="Why Custom Software Gives Businesses an Advantage">
+                <div class="trending-item-content">
+                  <h4 class="trending-item-title">Why Custom Software Gives Businesses a Competitive Advantage</h4>
+                  <span class="trending-item-meta">6 min read &bull; Strategy</span>
+                </div>
+              </a>
+
+              <a href="/blog/details" class="trending-item">
+                <img src="/assets/images/work-thumb-5.jpg" alt="Why DevOps and Cloud Engineering Are Essential">
+                <div class="trending-item-content">
+                  <h4 class="trending-item-title">Why DevOps and Cloud Engineering Are Essential for Scale</h4>
+                  <span class="trending-item-meta">7 min read &bull; Cloud</span>
+                </div>
+              </a>
+
+              <a href="/blog/details" class="trending-item">
+                <img src="/assets/images/blog-nocode-lowcode.jpg" alt="No-Code vs Low-Code: Which One Is Right?">
+                <div class="trending-item-content">
+                  <h4 class="trending-item-title">No-Code vs Low-Code: Which One Is Right for Your Stack?</h4>
+                  <span class="trending-item-meta">5 min read &bull; Architecture</span>
+                </div>
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. Related Articles Section
+         ========================================================================= -->
+    <section class="related-articles-section">
+      <div class="blogdetail-container">
+        <div class="section-header-row">
+          <div>
+            <div class="section-eyebrow">CONTINUE READING</div>
+            <h2 class="section-title">Related Perspectives &amp; Insights</h2>
+          </div>
+          <a href="/blog" class="btn-view-all-articles">
+            <span>View all articles</span>
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="related-grid">
+          <!-- Card 1 -->
+          <article class="blog-card" data-category="custom-software">
+            <a href="/blog/details" class="blog-card-img-wrap"
+              aria-label="Read Why Custom Software Gives Businesses a Competitive Advantage">
+              <img src="/assets/images/blog-custom-software.jpg"
+                alt="Why Custom Software Gives Businesses a Competitive Advantage" loading="lazy">
+            </a>
+            <div class="blog-card-body">
+              <h3 class="blog-card-title">
+                <a href="/blog/details">Why Custom Software Gives Businesses a Competitive Advantage</a>
+              </h3>
+              <p class="blog-card-excerpt">
+                Explore the real impact of bespoke enterprise solutions that out-innovate off-the-shelf software and fuel sustainable agility.
+              </p>
+              <div class="blog-card-meta">
+                <span class="meta-tag">INSIGHT</span>
+                <span class="meta-dot"></span>
+                <span class="meta-date">OCTOBER 10, 2026</span>
+                <span class="meta-dot"></span>
+                <span class="meta-read">6 MIN READ</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="blog-card" data-category="devops-cloud">
+            <a href="/blog/details" class="blog-card-img-wrap"
+              aria-label="Read Why DevOps and Cloud Engineering Are Essential for Modern Businesses">
+              <img src="/assets/images/work-thumb-5.jpg"
+                alt="Why DevOps and Cloud Engineering Are Essential for Modern Businesses" loading="lazy">
+            </a>
+            <div class="blog-card-body">
+              <h3 class="blog-card-title">
+                <a href="/blog/details">Why DevOps and Cloud Engineering Are Essential for Modern Businesses</a>
+              </h3>
+              <p class="blog-card-excerpt">
+                Streamline deployment pipelines, optimize uptime, and accelerate time-to-market with proven cloud-native architectural patterns.
+              </p>
+              <div class="blog-card-meta">
+                <span class="meta-tag">ARTICLE</span>
+                <span class="meta-dot"></span>
+                <span class="meta-date">SEPTEMBER 28, 2026</span>
+                <span class="meta-dot"></span>
+                <span class="meta-read">7 MIN READ</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="blog-card" data-category="ai-ml">
+            <a href="/blog/details" class="blog-card-img-wrap"
+              aria-label="Read How AI Is Reshaping Business Development Strategies">
+              <img src="/assets/images/work-laptop-clean.jpg" alt="How AI Is Reshaping Business Development Strategies"
+                loading="lazy">
+            </a>
+            <div class="blog-card-body">
+              <h3 class="blog-card-title">
+                <a href="/blog/details">How AI Is Reshaping Business Development Strategies</a>
+              </h3>
+              <p class="blog-card-excerpt">
+                AI-driven sales intelligence, client targeting, predictive modeling, and automated pipelines are revolutionizing growth playbooks.
+              </p>
+              <div class="blog-card-meta">
+                <span class="meta-tag">ARTICLE</span>
+                <span class="meta-dot"></span>
+                <span class="meta-date">SEPTEMBER 22, 2026</span>
+                <span class="meta-dot"></span>
+                <span class="meta-read">4 MIN READ</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. Pre-Footer Consultation CTA Section
+         ========================================================================= -->
+    <section class="career-perks-section" style="padding: 4.5rem 0; background: #ffffff;">
+      <div class="blogdetail-container">
+        <div class="footer-cta-wrapper"
+          style="background: linear-gradient(135deg, #0b192c 0%, #162a4a 100%); border-radius: 20px; padding: 3rem 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 2rem;">
+          <div style="max-width: 680px;">
+            <span
+              style="display: inline-block; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #38bdf8; margin-bottom: 0.5rem;">ACCELERATE YOUR ROADMAP</span>
+            <h2
+              style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(1.75rem, 2.5vw, 2.35rem); font-weight: 800; color: #ffffff; letter-spacing: -0.03em; margin: 0 0 0.75rem;">
+              Ready to engineer your next digital breakthrough?
+            </h2>
+            <p style="font-family: 'Inter', sans-serif; font-size: 0.95rem; line-height: 1.6; color: #94a3b8; margin: 0;">
+              Partner with Niche Techies' specialized engineering teams for enterprise software, cloud migration, and AI solutions.
+            </p>
+          </div>
+          <div>
+            <a href="/contact" class="btn-talk"
+              style="background: #0284c7; color: #ffffff; padding: 0.85rem 1.85rem; border-radius: 9999px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; box-shadow: 0 6px 20px rgba(2, 132, 199, 0.4); transition: all 0.25s ease;">
+              <span>Talk to Our Engineers</span>
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       5. Common Site Footer (Exact mirror from index.html & blog.html)
+       ========================================================================= -->

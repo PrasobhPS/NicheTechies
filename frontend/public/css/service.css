@@ -1,0 +1,786 @@
+/* =========================================================================
+   Service Page Stylesheet
+   Niche Techies - Innovating Talent. Powering Technology.
+   Signature Prussian Navy Theme: #1a2b4b
+   Compiled from src/scss/service.scss
+   ========================================================================= */
+
+.service-page-main {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+
+/* Common Container - Matches .header-container and .contact-container exactly (1440px / 3.5rem padding) */
+.service-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .service-container {
+    padding: 0 3.5rem;
+  }
+}
+
+/* =========================================================================
+   1. Service Hero Section (Executive About Page Theme)
+   ========================================================================= */
+.service-hero-section {
+  position: relative;
+  background-color: #060e1d;
+  background-image: 
+    linear-gradient(90deg, 
+      rgba(255, 255, 255, 1) 0%, 
+      rgba(255, 255, 255, 0.98) 28%, 
+      rgba(255, 255, 255, 0.75) 40%, 
+      rgba(255, 255, 255, 0.2) 50%, 
+      transparent 56%
+    ),
+    linear-gradient(90deg, 
+      transparent 35%, 
+      rgba(15, 28, 58, 0.18) 55%, 
+      rgba(10, 21, 46, 0.45) 75%, 
+      rgba(6, 14, 32, 0.68) 100%
+    ),
+    url('../assets/images/service-banner.jpeg');
+  background-position: right center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  padding: 8.5rem 0 5rem;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1400px) {
+  .service-hero-section {
+    padding: 9rem 0 5.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .service-hero-section {
+    background-image: 
+      linear-gradient(90deg, 
+        rgba(255, 255, 255, 1) 0%, 
+        rgba(255, 255, 255, 0.98) 36%, 
+        rgba(255, 255, 255, 0.7) 50%, 
+        transparent 65%
+      ),
+      linear-gradient(90deg, 
+        transparent 30%, 
+        rgba(15, 28, 58, 0.25) 55%, 
+        rgba(6, 14, 32, 0.65) 100%
+      ),
+      url('../assets/images/service-banner.jpeg');
+    background-position: 75% center;
+    padding: 7.5rem 0 4.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-hero-section {
+    background-image: 
+      linear-gradient(180deg, rgba(255, 255, 255, 0.99) 0%, rgba(255, 255, 255, 0.95) 55%, rgba(240, 245, 252, 0.9) 85%, #f4f7fb 100%),
+      url('../assets/images/service-banner.jpeg');
+    background-position: center center;
+    padding: 6.75rem 0 3.5rem;
+  }
+}
+
+.service-hero-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.service-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 620px;
+}
+
+.service-hero-eyebrow {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #64748b;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.service-hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.85rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #0c1524;
+  margin-bottom: 0.85rem;
+}
+
+.service-hero-desc {
+  font-family: var(--font-body);
+  font-size: clamp(0.92rem, 1.1vw, 1.02rem);
+  line-height: 1.68;
+  color: #475569;
+  margin-bottom: 1.85rem;
+  max-width: 540px;
+}
+
+.service-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.btn-service-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.68rem 1.5rem;
+  border-radius: 9999px;
+  background: #0f172a;
+  color: #ffffff !important;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 14px -2px rgba(15, 23, 42, 0.2);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-service-primary:hover {
+  background: #1e293b;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px -3px rgba(15, 23, 42, 0.3);
+}
+
+.btn-service-primary svg {
+  transition: transform 0.25s ease;
+}
+
+.btn-service-primary:hover svg {
+  transform: translateX(3px);
+}
+
+.btn-service-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.68rem 1.5rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1.5px solid #cbd5e1;
+  color: #0f172a !important;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-service-secondary:hover {
+  border-color: #0f172a;
+  background: #ffffff;
+  color: #0f172a !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px -4px rgba(15, 23, 42, 0.1);
+}
+
+.btn-service-secondary svg {
+  transition: transform 0.25s ease;
+}
+
+.btn-service-secondary:hover svg {
+  transform: translateX(3px);
+}
+
+/* =========================================================================
+   2. Filter & Navigation Bar
+   ========================================================================= */
+.services-overview-section {
+  padding: 4rem 0 6rem;
+  background-color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .services-overview-section {
+    padding: 5rem 0 7rem;
+  }
+}
+
+.services-overview-section .section-headline-wrap {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 3rem;
+}
+
+.services-overview-section .section-headline-wrap .section-eyebrow {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #1a2b4b;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.services-overview-section .section-headline-wrap .section-title {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 2.15rem;
+  font-weight: 800;
+  color: #0c1524;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  margin: 0 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .services-overview-section .section-headline-wrap .section-title {
+    font-size: 2.65rem;
+  }
+}
+
+.services-overview-section .section-headline-wrap .section-subtitle {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Category Filter Pills */
+.services-overview-section .service-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (max-width: 767px) {
+  .services-overview-section .service-filter-bar {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    justify-content: flex-start;
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+    padding: 0.5rem 1.25rem 1rem;
+    margin-bottom: 2rem;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .services-overview-section .service-filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .services-overview-section .service-filter-bar .filter-pill {
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 0.6rem 1.25rem;
+    font-size: 0.85rem;
+  }
+
+  .services-overview-section .service-filter-bar::after {
+    content: '';
+    flex: 0 0 0.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .services-overview-section .service-filter-bar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.services-overview-section .service-filter-bar .filter-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.65rem 1.35rem;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #475569;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.services-overview-section .service-filter-bar .filter-pill:hover:not(.active) {
+  color: #1a2b4b;
+  border-color: #cdd7e5;
+  background-color: #f1f5fa;
+  transform: translateY(-1px);
+}
+
+.services-overview-section .service-filter-bar .filter-pill.active {
+  background-color: #1a2b4b;
+  border-color: #1a2b4b;
+  color: #ffffff;
+  box-shadow: 0 4px 14px -2px rgba(26, 43, 75, 0.35);
+  cursor: default;
+}
+
+/* =========================================================================
+   3. Modern SaaS Service Cards Grid (3 Columns Desktop)
+   ========================================================================= */
+.services-saas-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .services-saas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .services-saas-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.25rem;
+  }
+}
+
+/* Individual SaaS Service Card */
+.service-saas-card {
+  background-color: #ffffff;
+  border: 1px solid #eef2f6;
+  border-radius: 20px;
+  padding: 2.25rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.04);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-saas-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+.service-saas-card:hover {
+  transform: translateY(-6px);
+  border-color: #cdd7e5;
+  box-shadow: 0 20px 35px -10px rgba(15, 23, 42, 0.08), 0 10px 15px -5px rgba(15, 23, 42, 0.04);
+}
+
+.service-saas-card:hover::before {
+  background: #1a2b4b;
+}
+
+.service-saas-card:hover .service-icon-box {
+  background-color: #1a2b4b;
+  color: #ffffff;
+  transform: scale(1.08) rotate(-2deg);
+  box-shadow: 0 8px 20px -3px rgba(26, 43, 75, 0.4);
+}
+
+.service-saas-card:hover .service-card-title a {
+  color: #1a2b4b;
+}
+
+.service-saas-card:hover .service-card-cta {
+  color: #1a2b4b;
+}
+
+.service-saas-card:hover .service-card-cta svg {
+  transform: translateX(5px);
+}
+
+/* Card Top Row: Elevated Icon + Serial Badge */
+.service-saas-card .card-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.75rem;
+}
+
+.service-saas-card .card-top-bar .service-icon-box {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background-color: #f1f5fa;
+  color: #1a2b4b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-saas-card .card-top-bar .service-icon-box svg {
+  width: 26px;
+  height: 26px;
+}
+
+.service-saas-card .card-top-bar .service-category-badge {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  color: #64748b;
+}
+
+/* Service Title */
+.service-saas-card .service-card-title {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #0c1524;
+  margin: 0 0 1rem;
+}
+
+.service-saas-card .service-card-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* Service Description from Image */
+.service-saas-card .service-card-desc {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: #52637a;
+  margin: 0 0 1.5rem;
+  flex-grow: 1;
+}
+
+/* Feature Checklist / Tech Capabilities */
+.service-saas-card .service-capabilities-list {
+  border-top: 1px solid #f1f5f9;
+  padding-top: 1.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.service-saas-card .service-capabilities-list .capability-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+.service-saas-card .service-capabilities-list .capability-item svg {
+  color: #1a2b4b;
+  flex-shrink: 0;
+}
+
+/* CTA Button: READ MORE > */
+.service-saas-card .service-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #0c1524;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  margin-top: auto;
+}
+
+.service-saas-card .service-card-cta svg {
+  transition: transform 0.25s ease;
+}
+
+/* Hidden Card Utility for Filter Animation */
+.service-saas-card.hidden-card {
+  display: none !important;
+}
+
+/* =========================================================================
+   4. Delivery Framework / Engagement Models Strip
+   ========================================================================= */
+.service-framework-section {
+  background-color: #070e1b;
+  color: #ffffff;
+  padding: 5.5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-framework-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20%;
+  width: 600px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(26, 43, 75, 0.3) 0%, rgba(7, 14, 27, 0) 70%);
+  pointer-events: none;
+}
+
+.service-framework-section .framework-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.service-framework-section .framework-header .framework-eyebrow {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #c5d4ea;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.service-framework-section .framework-header .framework-title {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 2.15rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin: 0 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .service-framework-section .framework-header .framework-title {
+    font-size: 2.5rem;
+  }
+}
+
+.service-framework-section .framework-header .framework-subtitle {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.service-framework-section .engagement-models-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .service-framework-section .engagement-models-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.service-framework-section .engagement-models-grid .model-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 2.25rem 2rem;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.service-framework-section .engagement-models-grid .model-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(197, 212, 234, 0.4);
+  transform: translateY(-4px);
+}
+
+.service-framework-section .engagement-models-grid .model-card .model-number {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #c5d4ea;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.service-framework-section .engagement-models-grid .model-card .model-name {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.service-framework-section .engagement-models-grid .model-card .model-desc {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.90625rem;
+  line-height: 1.62;
+  color: #94a3b8;
+  margin-bottom: 1.25rem;
+}
+
+.service-framework-section .engagement-models-grid .model-card .model-highlight {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #c5d4ea;
+}
+
+/* =========================================================================
+   5. Back To Top Floating Button
+   ========================================================================= */
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #1a2b4b;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(26, 43, 75, 0.28), 0 2px 6px rgba(26, 43, 75, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px) scale(0.92);
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.25s ease,
+              box-shadow 0.25s ease;
+  user-select: none;
+  padding: 0;
+  margin: 0;
+}
+
+.back-to-top.is-visible,
+.back-to-top.visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) scale(1) !important;
+  pointer-events: auto !important;
+}
+
+.back-to-top:hover {
+  background: #111d33;
+  transform: translateY(-4px) scale(1.04) !important;
+  box-shadow: 0 12px 30px rgba(26, 43, 75, 0.4), 0 4px 10px rgba(26, 43, 75, 0.16);
+}
+
+.back-to-top:active {
+  transform: translateY(-1px) scale(0.98) !important;
+}
+
+.back-to-top .progress-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 48px;
+  transform: rotate(-90deg);
+  pointer-events: none;
+}
+
+.back-to-top .progress-ring-bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.12);
+  stroke-width: 2.5;
+}
+
+.back-to-top .progress-ring-fill {
+  fill: none;
+  stroke: #c5d4ea;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.1s linear;
+}
+
+.back-to-top .back-to-top-icon {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  transition: transform 0.25s ease;
+}
+
+.back-to-top .back-to-top-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.back-to-top:hover .back-to-top-icon {
+  transform: translateY(-2px);
+}
+
+/* =========================================================================
+   6. Contact Section Visibility Guarantee
+   ========================================================================= */
+.contact-section {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+@media (max-width: 767px) {
+  .contact-card-box {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+
+  .contact-visual {
+    display: block !important;
+    min-height: 240px;
+    height: 240px;
+  }
+
+  .contact-main-wrapper {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}

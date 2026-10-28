@@ -1,0 +1,117 @@
+{
+  "home": {
+    "title": "Niche Global — Talent and Transformation",
+    "bodyClass": "bg-white text-slate-900 antialiased selection:bg-blue-600 selection:text-white",
+    "css": [],
+    "hasInlineScripts": false,
+    "sourceFile": "index.html"
+  },
+  "about": {
+    "title": "About Us — Niche Techies | Innovative Solutions. Powered by People.",
+    "bodyClass": "bg-white text-slate-900 antialiased selection:bg-blue-600 selection:text-white",
+    "css": [
+      "aboutpage.css"
+    ],
+    "hasInlineScripts": false,
+    "sourceFile": "about.html"
+  },
+  "services": {
+    "title": "Services &amp; Capabilities — Niche Techies | Innovating Talent. Powering Technology.",
+    "bodyClass": "bg-white text-slate-900 antialiased selection:bg-[#1a2b4b] selection:text-white",
+    "css": [
+      "service.css"
+    ],
+    "hasInlineScripts": true,
+    "sourceFile": "service.html"
+  },
+  "caseStudies": {
+    "title": "Case Studies — Niche Techies | Real Results. Meaningful Impact.",
+    "bodyClass": "bg-white text-slate-900 antialiased selection:bg-blue-600 selection:text-white",
+    "css": [
+      "caseStudy.css"
+    ],
+    "hasInlineScripts": true,
+    "sourceFile": "caseStudy.html"
+  },
+  "blog": {
+    "title": "Blog &amp; Insights — Niche Techies | Technology Perspectives &amp; Engineering Insights",
+    "bodyClass": "bg-white text-slate-900 antialiased selection:bg-blue-600 selection:text-white",
+    "css": [
+      "blogpage.css"
+    ],
+    "hasInlineScripts": true,
+    "sourceFile": "blog.html"
+  },
+  "blogDetails": {
+    "title": "AI in Software Development: Transforming Modern Engineering — Niche Techies",
+    "bodyClass": "bg-white text-slate-900 antialiased selection:bg-blue-600 selection:text-white",
+    "css": [
+      "blogdetails.css"
+    ],
+    "hasInlineScripts": true,
+    "sourceFile": "blogdetails.html"
+  },
+  "careers": {
+    "title": "Careers — Niche Techies | Join our awesome team of professionals!",
+    "bodyClass": "bg-white text-slate-900 antialiased selection:bg-blue-600 selection:text-white",
+    "css": [
+      "careerpage.css"
+    ],
+    "hasInlineScripts": true,
+    "sourceFile": "career.html"
+  },
+  "contact": {
+    "title": "Contact Us — Niche Techies | Let's Build Something Great Together",
+    "bodyClass": "contact-page bg-white text-slate-900 antialiased selection:bg-blue-600 selection:text-white",
+    "css": [
+      "contactpage.css"
+    ],
+    "hasInlineScripts": true,
+    "sourceFile": "contact.html"
+  },
+  "gallery": {
+    "title": "Gallery — Niche Techies",
+    "bodyClass": "bg-[#fafafc] text-slate-900 antialiased selection:bg-blue-600 selection:text-white",
+    "css": [
+      "gallery.css"
+    ],
+    "hasInlineScripts": true,
+    "sourceFile": "gallery.html"
+  },
+  "jobDetails": {
+    "title": "Full Stack Developer (React / Node.js &amp; Cloud) — Careers at Niche Techies",
+    "bodyClass": "bg-white text-slate-900 antialiased selection:bg-blue-600 selection:text-white",
+    "css": [
+      "jobdetails.css"
+    ],
+    "hasInlineScripts": true,
+    "sourceFile": "jobdetails.html"
+  },
+  "prakria": {
+    "title": "Prakria Direct — Community Engagement &amp; Networking Platform | Niche Techies",
+    "bodyClass": "project-details-page antialiased selection:bg-blue-600 selection:text-white",
+    "css": [
+      "project-details.css"
+    ],
+    "hasInlineScripts": true,
+    "sourceFile": "prakria-direct.html"
+  },
+  "akiGroup": {
+    "title": "AKI Group — Digital Product & Analytics Dashboard | Niche Techies",
+    "bodyClass": "project-details-page antialiased selection:bg-blue-600 selection:text-white",
+    "css": [
+      "project-details.css"
+    ],
+    "hasInlineScripts": true,
+    "sourceFile": "aki-group.html"
+  },
+  "aladdin365": {
+    "title": "Aladdin365 — Textile Industry Networking Platform | Niche Techies",
+    "bodyClass": "project-details-page antialiased selection:bg-blue-600 selection:text-white",
+    "css": [
+      "project-details.css"
+    ],
+    "hasInlineScripts": true,
+    "sourceFile": "aladdin365-details.html"
+  }
+}
