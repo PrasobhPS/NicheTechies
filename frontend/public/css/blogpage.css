@@ -209,7 +209,7 @@
 }
 
 .btn-blog-secondary:hover svg {
-  transform: translateY(2px);
+  transform: translateX(3px);
 }
 
 /* Horizontal Key Metrics Strip (4 Columns) */

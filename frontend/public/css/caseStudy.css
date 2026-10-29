@@ -206,7 +206,7 @@
 }
 
 .btn-casestudy-secondary:hover svg {
-  transform: translateY(2px);
+  transform: translateX(3px);
 }
 
 /* =========================================================================
