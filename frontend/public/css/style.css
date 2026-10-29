@@ -4000,6 +4000,10 @@ textarea {
   margin: 0;
 }
 
+.office-address-single {
+  white-space: nowrap;
+}
+
 /* Bottom Tier: Copyright & Legal */
 .footer-bottom-bar {
   display: flex;
