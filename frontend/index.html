@@ -14,7 +14,54 @@
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Pre-load and apply all stylesheets to prevent FOUC / flash of broken CSS -->
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/aboutpage.css" />
+    <link rel="stylesheet" href="/css/service.css" />
+    <link rel="stylesheet" href="/css/caseStudy.css" />
+    <link rel="stylesheet" href="/css/careerpage.css" />
+    <link rel="stylesheet" href="/css/contactpage.css" />
+    <link rel="stylesheet" href="/css/blogpage.css" />
+    <link rel="stylesheet" href="/css/blogdetails.css" />
+    <link rel="stylesheet" href="/css/jobdetails.css" />
+    <link rel="stylesheet" href="/css/project-details.css" />
+    <link rel="stylesheet" href="/css/gallery.css" />
+
+    <!-- Tailwind CSS Engine & Configuration in Head to prevent unstyled flash -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: {
+                950: '#070e1b',
+                900: '#0a1120',
+                850: '#0b1426',
+                800: '#0f192d',
+                700: '#16243f',
+              },
+              techBlue: {
+                400: '#3a5075',
+                500: '#253b61',
+                600: '#1a2b4b',
+              },
+            },
+            fontFamily: {
+              heading: ['Plus Jakarta Sans', 'sans-serif'],
+              body: ['Inter', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Animation & Site Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="/js/main.js"></script>
+
     <title>Niche Global — Talent and Transformation</title>
   </head>
   <body>

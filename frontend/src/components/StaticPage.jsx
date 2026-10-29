@@ -1,37 +1,25 @@
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function runInlineScript(source) {
-  if (!source?.trim()) return;
+  if (!source || !source.trim()) return;
   const script = document.createElement('script');
   script.text = source;
   document.body.appendChild(script);
   script.remove();
 }
 
-export default function StaticPage({ html, inlineScript, bodyClass, extraCss = [] }) {
+export default function StaticPage(props) {
+  const { html, inlineScript, bodyClass } = props || {};
   const containerRef = useRef(null);
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.body.className = bodyClass;
+    if (bodyClass) {
+      document.body.className = bodyClass;
+    }
     document.documentElement.lang = 'en';
   }, [bodyClass]);
-
-  useEffect(() => {
-    const links = extraCss.map((file) => {
-      const link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.href = `/css/${file}`;
-      link.dataset.nichePageCss = 'true';
-      document.head.appendChild(link);
-      return link;
-    });
-
-    return () => {
-      links.forEach((link) => link.remove());
-    };
-  }, [extraCss]);
 
   useEffect(() => {
     const root = containerRef.current;
@@ -68,10 +56,12 @@ export default function StaticPage({ html, inlineScript, bodyClass, extraCss = [
   }, [html, navigate]);
 
   useEffect(() => {
-    runInlineScript(inlineScript);
+    if (inlineScript) {
+      runInlineScript(inlineScript);
+    }
     window.initNicheGlobalSite?.();
     window.scrollTo(0, 0);
   }, [html, inlineScript]);
 
-  return <div ref={containerRef} dangerouslySetInnerHTML={{ __html: html }} />;
+  return <div ref={containerRef} dangerouslySetInnerHTML={{ __html: html || '' }} />;
 }
