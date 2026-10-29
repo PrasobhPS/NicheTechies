@@ -4,8 +4,9 @@
  */
 
 function initNicheGlobalSite() {
-  if (window.ScrollTrigger) {
-    window.ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+  if (typeof ScrollTrigger !== 'undefined') {
+    ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    
   }
 
   initStickyHeader();
@@ -23,6 +24,10 @@ function initNicheGlobalSite() {
   initBlogPageGsapAnimations();
   initCareerPageGsapAnimations();
   initBackToTop();
+
+  if (typeof ScrollTrigger !== 'undefined') {
+    ScrollTrigger.refresh();
+  }
 }
 
 document.addEventListener('DOMContentLoaded', initNicheGlobalSite);
@@ -440,12 +445,12 @@ function initProductStackedDeck() {
   gsap.from('.product-section-header', {
     scrollTrigger: {
       trigger: '.product-section',
-      start: 'top 82%',
+      start: 'top 92%',
       once: true
     },
     y: 35,
     opacity: 0,
-    duration: 0.8,
+    duration: 0.35,
     ease: 'power2.out'
   });
 
@@ -484,7 +489,7 @@ function initProductStackedDeck() {
         gsap.from(infoItems, {
           scrollTrigger: {
             trigger: card,
-            start: 'top 85%',
+            start: 'top 92%',
             once: true
           },
           y: 20,
@@ -501,12 +506,12 @@ function initProductStackedDeck() {
         gsap.from(mockup, {
           scrollTrigger: {
             trigger: card,
-            start: 'top 80%',
+            start: 'top 92%',
             once: true
           },
           scale: 0.95,
           opacity: 0,
-          duration: 0.7,
+          duration: 0.35,
           ease: 'power2.out',
           clearProps: 'all'
         });
@@ -522,12 +527,12 @@ function initProductStackedDeck() {
         gsap.from(cardInner, {
           scrollTrigger: {
             trigger: card,
-            start: 'top 85%',
+            start: 'top 92%',
             once: true
           },
           y: 30,
           opacity: 0,
-          duration: 0.7,
+          duration: 0.35,
           ease: 'power2.out',
           clearProps: 'all'
         });
@@ -554,7 +559,7 @@ function initGsapAnimations() {
     if (heroBgArt) {
       heroTL.fromTo(heroBgArt,
         { scale: 1.08, opacity: 0, x: 25 },
-        { scale: 1, opacity: 1, x: 0, duration: 1.4, ease: 'power3.out' },
+        { scale: 1, opacity: 1, x: 0, duration: 0.5, ease: 'power3.out' },
         0
       );
 
@@ -587,15 +592,15 @@ function initGsapAnimations() {
       heroTL.from(titleLines, {
         y: 28,
         opacity: 0,
-        stagger: 0.1,
-        duration: 0.8,
+        stagger: 0.05,
+        duration: 0.35,
         ease: 'power3.out'
       }, 0.3);
     } else {
       heroTL.from('.hero-title', {
         y: 28,
         opacity: 0,
-        duration: 0.8,
+        duration: 0.35,
         ease: 'power3.out'
       }, 0.3);
     }
@@ -606,7 +611,7 @@ function initGsapAnimations() {
       heroTL.from(description, {
         y: 20,
         opacity: 0,
-        duration: 0.7,
+        duration: 0.35,
         ease: 'power3.out'
       }, 0.5);
     }
@@ -618,7 +623,7 @@ function initGsapAnimations() {
         y: 20,
         opacity: 0,
         scale: 0.96,
-        stagger: 0.1,
+        stagger: 0.05,
         duration: 0.6,
         ease: 'back.out(1.4)'
       }, 0.65);
@@ -644,9 +649,7 @@ function initGsapAnimations() {
         const counterObj = { val: 0 };
         gsap.to(counterObj, {
           val: target,
-          duration: 1.4,
-          ease: 'power2.out',
-          delay: 0.6,
+          duration: 0.8, ease: 'power2.out', delay: 0.1,
           onUpdate: () => {
             counter.textContent = Math.floor(counterObj.val) + suffix;
           }
@@ -755,7 +758,7 @@ function initGsapAnimations() {
       heroTL.from(brandsBar, {
         y: 20,
         opacity: 0,
-        duration: 0.7,
+        duration: 0.35,
         ease: 'power2.out'
       }, 0.95);
 
@@ -764,7 +767,7 @@ function initGsapAnimations() {
         heroTL.from(brandDivider, {
           scaleX: 0,
           transformOrigin: 'left center',
-          duration: 0.8,
+          duration: 0.35,
           ease: 'power2.out'
         }, 1.1);
       }
@@ -785,11 +788,11 @@ function initGsapAnimations() {
     if (window.matchMedia('(min-width: 1024px)').matches) {
       const heroContent = document.querySelector('.hero-content');
 
-      const setBgX = heroBgArt ? gsap.quickTo(heroBgArt, 'x', { duration: 0.8, ease: 'power2.out' }) : null;
-      const setBgY = heroBgArt ? gsap.quickTo(heroBgArt, 'y', { duration: 0.8, ease: 'power2.out' }) : null;
+      const setBgX = heroBgArt ? gsap.quickTo(heroBgArt, 'x', { duration: 0.35, ease: 'power2.out' }) : null;
+      const setBgY = heroBgArt ? gsap.quickTo(heroBgArt, 'y', { duration: 0.35, ease: 'power2.out' }) : null;
 
-      const setContentX = heroContent ? gsap.quickTo(heroContent, 'x', { duration: 0.7, ease: 'power2.out' }) : null;
-      const setContentY = heroContent ? gsap.quickTo(heroContent, 'y', { duration: 0.7, ease: 'power2.out' }) : null;
+      const setContentX = heroContent ? gsap.quickTo(heroContent, 'x', { duration: 0.35, ease: 'power2.out' }) : null;
+      const setContentY = heroContent ? gsap.quickTo(heroContent, 'y', { duration: 0.35, ease: 'power2.out' }) : null;
 
       const setCardTiltX = servicesCard ? gsap.quickTo(servicesCard, 'rotationX', { duration: 0.6, ease: 'power2.out' }) : null;
       const setCardTiltY = servicesCard ? gsap.quickTo(servicesCard, 'rotationY', { duration: 0.6, ease: 'power2.out' }) : null;
@@ -932,7 +935,7 @@ function initGsapAnimations() {
 
       ScrollTrigger.create({
         trigger: counter,
-        start: 'top 85%',
+        start: 'top 92%',
         once: true,
         onEnter: () => {
           gsap.fromTo(counter, 
@@ -955,13 +958,13 @@ function initGsapAnimations() {
     gsap.from('.service-card', {
       scrollTrigger: {
         trigger: '.services-section',
-        start: 'top 85%',
+        start: 'top 92%',
         once: true
       },
       y: 30,
       opacity: 0,
       duration: 0.6,
-      stagger: 0.12,
+      stagger: 0.05,
       ease: 'power2.out',
       clearProps: 'all'
     });
@@ -970,12 +973,12 @@ function initGsapAnimations() {
     gsap.from('.about-visual', {
       scrollTrigger: {
         trigger: '.about-section',
-        start: 'top 80%',
+        start: 'top 92%',
         once: true
       },
       x: -30,
       opacity: 0,
-      duration: 0.8,
+      duration: 0.35,
       ease: 'power2.out',
       clearProps: 'all'
     });
@@ -983,12 +986,12 @@ function initGsapAnimations() {
     gsap.from('.about-content', {
       scrollTrigger: {
         trigger: '.about-section',
-        start: 'top 80%',
+        start: 'top 92%',
         once: true
       },
       x: 20,
       opacity: 0,
-      duration: 0.8,
+      duration: 0.35,
       ease: 'power2.out',
       clearProps: 'all'
     });
@@ -997,13 +1000,13 @@ function initGsapAnimations() {
     gsap.from('.timeline-step', {
       scrollTrigger: {
         trigger: '.process-section',
-        start: 'top 80%',
+        start: 'top 92%',
         once: true
       },
       y: 25,
       opacity: 0,
-      stagger: 0.15,
-      duration: 0.7,
+      stagger: 0.05,
+      duration: 0.35,
       ease: 'power2.out',
       clearProps: 'all'
     });
@@ -1013,12 +1016,12 @@ function initGsapAnimations() {
       gsap.from('.solutions-header-centered', {
         scrollTrigger: {
           trigger: '.solutions-section',
-          start: 'top 82%',
+          start: 'top 92%',
           once: true
         },
         y: 30,
         opacity: 0,
-        duration: 0.7,
+        duration: 0.35,
         ease: 'power2.out',
         clearProps: 'all'
       });
@@ -1026,7 +1029,7 @@ function initGsapAnimations() {
       gsap.from('.solutions-pillars-grid .solution-pillar-card', {
         scrollTrigger: {
           trigger: '.solutions-pillars-grid',
-          start: 'top 84%',
+          start: 'top 92%',
           once: true
         },
         y: 30,
@@ -1053,12 +1056,12 @@ function initGsapAnimations() {
       gsap.from('.what-we-build-section .build-header', {
         scrollTrigger: {
           trigger: '.what-we-build-section',
-          start: 'top 82%',
+          start: 'top 92%',
           once: true
         },
         y: 25,
         opacity: 0,
-        duration: 0.7,
+        duration: 0.35,
         ease: 'power2.out',
         clearProps: 'all'
       });
@@ -1066,7 +1069,7 @@ function initGsapAnimations() {
       gsap.from('.what-we-build-section .build-card', {
         scrollTrigger: {
           trigger: '.build-grid',
-          start: 'top 85%',
+          start: 'top 92%',
           once: true
         },
         y: 25,
@@ -1080,12 +1083,12 @@ function initGsapAnimations() {
       gsap.from('.work-list .work-item', {
         scrollTrigger: {
           trigger: '.work-section',
-          start: 'top 80%',
+          start: 'top 92%',
           once: true
         },
         y: 25,
         opacity: 0,
-        stagger: 0.1,
+        stagger: 0.05,
         duration: 0.6,
         ease: 'power2.out',
         clearProps: 'all'
@@ -1098,12 +1101,12 @@ function initGsapAnimations() {
     gsap.from('.testimonials-intro', {
       scrollTrigger: {
         trigger: '.testimonials-section',
-        start: 'top 80%',
+        start: 'top 92%',
         once: true
       },
       x: -30,
       opacity: 0,
-      duration: 0.8,
+      duration: 0.35,
       ease: 'power2.out',
       clearProps: 'all'
     });
@@ -1111,13 +1114,13 @@ function initGsapAnimations() {
     gsap.from('.testimonial-card', {
       scrollTrigger: {
         trigger: '.testimonials-section',
-        start: 'top 80%',
+        start: 'top 92%',
         once: true
       },
       x: 30,
       opacity: 0,
-      stagger: 0.15,
-      duration: 0.8,
+      stagger: 0.05,
+      duration: 0.35,
       ease: 'power2.out',
       clearProps: 'all'
     });
@@ -1127,12 +1130,12 @@ function initGsapAnimations() {
       gsap.from('.blog-header', {
         scrollTrigger: {
           trigger: '.blog-section',
-          start: 'top 80%',
+          start: 'top 92%',
           once: true
         },
         y: 30,
         opacity: 0,
-        duration: 0.75,
+        duration: 0.35,
         ease: 'power2.out',
         clearProps: 'all'
       });
@@ -1140,13 +1143,13 @@ function initGsapAnimations() {
       gsap.from('.blog-card', {
         scrollTrigger: {
           trigger: '.blog-section',
-          start: 'top 75%',
+          start: 'top 92%',
           once: true
         },
         y: 35,
         opacity: 0,
-        stagger: 0.15,
-        duration: 0.8,
+        stagger: 0.05,
+        duration: 0.35,
         delay: 0.1,
         ease: 'power2.out',
         clearProps: 'all'
@@ -1155,12 +1158,12 @@ function initGsapAnimations() {
       gsap.from('.blog-bottom-strip', {
         scrollTrigger: {
           trigger: '.blog-bottom-strip',
-          start: 'top 85%',
+          start: 'top 92%',
           once: true
         },
         y: 25,
         opacity: 0,
-        duration: 0.75,
+        duration: 0.35,
         ease: 'power2.out',
         clearProps: 'all'
       });
@@ -1174,12 +1177,12 @@ function initGsapAnimations() {
         gsap.from(contactBox, {
           scrollTrigger: {
             trigger: contactSection,
-            start: 'top 85%',
+            start: 'top 92%',
             once: true
           },
           y: 25,
           opacity: 0,
-          duration: 0.7,
+          duration: 0.35,
           ease: 'power2.out',
           clearProps: 'all'
         });
@@ -1227,7 +1230,7 @@ function initAboutPageGsapAnimations() {
   if (aboutTitle) {
     aboutHeroTL.fromTo(aboutTitle,
       { y: 30, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.85, ease: 'power3.out', clearProps: 'opacity,transform' },
+      { y: 0, opacity: 1, duration: 0.35, ease: 'power3.out', clearProps: 'opacity,transform' },
       0.28
     );
   }
@@ -1237,7 +1240,7 @@ function initAboutPageGsapAnimations() {
   if (aboutDesc) {
     aboutHeroTL.fromTo(aboutDesc,
       { y: 20, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.75, ease: 'power3.out', clearProps: 'opacity,transform' },
+      { y: 0, opacity: 1, duration: 0.35, ease: 'power3.out', clearProps: 'opacity,transform' },
       0.42
     );
   }
@@ -1291,12 +1294,12 @@ function initAboutPageGsapAnimations() {
     gsap.from('.about-values-intro', {
       scrollTrigger: {
         trigger: valuesSection,
-        start: 'top 82%',
+        start: 'top 92%',
         once: true
       },
       x: -35,
       opacity: 0,
-      duration: 0.85,
+      duration: 0.35,
       ease: 'power2.out',
       clearProps: 'all'
     });
@@ -1304,13 +1307,13 @@ function initAboutPageGsapAnimations() {
     gsap.from('.value-card', {
       scrollTrigger: {
         trigger: '.about-values-grid',
-        start: 'top 85%',
+        start: 'top 92%',
         once: true
       },
       y: 35,
       opacity: 0,
-      stagger: 0.1,
-      duration: 0.75,
+      stagger: 0.05,
+      duration: 0.35,
       ease: 'power2.out',
       clearProps: 'all'
     });
@@ -1387,12 +1390,12 @@ function initAboutPageGsapAnimations() {
     gsap.from('.tech-header', {
       scrollTrigger: {
         trigger: techSection,
-        start: 'top 82%',
+        start: 'top 92%',
         once: true
       },
       y: 25,
       opacity: 0,
-      duration: 0.75,
+      duration: 0.35,
       ease: 'power2.out',
       clearProps: 'all'
     });
@@ -1400,7 +1403,7 @@ function initAboutPageGsapAnimations() {
     gsap.from('.tech-cell', {
       scrollTrigger: {
         trigger: '.tech-grid-wrapper',
-        start: 'top 85%',
+        start: 'top 92%',
         once: true
       },
       scale: 0.88,
@@ -1426,13 +1429,13 @@ function initAboutPageGsapAnimations() {
       gsap.from(cultureHeader.children, {
         scrollTrigger: {
           trigger: cultureSection,
-          start: 'top 80%',
+          start: 'top 92%',
           once: true
         },
         y: 30,
         opacity: 0,
-        stagger: 0.12,
-        duration: 0.8,
+        stagger: 0.05,
+        duration: 0.35,
         ease: 'power3.out',
         clearProps: 'all'
       });
@@ -1443,13 +1446,13 @@ function initAboutPageGsapAnimations() {
       gsap.from(reelCards, {
         scrollTrigger: {
           trigger: '.about-culture-reel-wrap',
-          start: 'top 85%',
+          start: 'top 92%',
           once: true
         },
         y: 45,
         opacity: 0,
         stagger: 0.07,
-        duration: 0.75,
+        duration: 0.35,
         ease: 'power3.out',
         clearProps: 'all'
       });
@@ -1751,12 +1754,12 @@ function initAboutPageGsapAnimations() {
     gsap.from('.join-frame', {
       scrollTrigger: {
         trigger: joinSection,
-        start: 'top 80%',
+        start: 'top 92%',
         once: true
       },
       x: -35,
       opacity: 0,
-      duration: 0.85,
+      duration: 0.35,
       ease: 'power2.out',
       clearProps: 'all'
     });
@@ -1764,12 +1767,12 @@ function initAboutPageGsapAnimations() {
     gsap.from('.about-join-content', {
       scrollTrigger: {
         trigger: joinSection,
-        start: 'top 80%',
+        start: 'top 92%',
         once: true
       },
       x: 35,
       opacity: 0,
-      duration: 0.85,
+      duration: 0.35,
       ease: 'power2.out',
       clearProps: 'all'
     });
@@ -1807,7 +1810,7 @@ function initServicePageGsapAnimations() {
   if (heroTitle) {
     serviceHeroTL.fromTo(heroTitle,
       { y: 30, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.85, ease: 'power3.out', clearProps: 'opacity,transform' },
+      { y: 0, opacity: 1, duration: 0.35, ease: 'power3.out', clearProps: 'opacity,transform' },
       0.28
     );
   }
@@ -1817,7 +1820,7 @@ function initServicePageGsapAnimations() {
   if (heroDesc) {
     serviceHeroTL.fromTo(heroDesc,
       { y: 20, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.75, ease: 'power3.out', clearProps: 'opacity,transform' },
+      { y: 0, opacity: 1, duration: 0.35, ease: 'power3.out', clearProps: 'opacity,transform' },
       0.42
     );
   }
@@ -1947,8 +1950,8 @@ function initCaseStudyPageGsapAnimations() {
       scale: 0.8,
       opacity: 0,
       y: 15,
-      duration: 0.8,
-      stagger: 0.15,
+      duration: 0.35,
+      stagger: 0.05,
       ease: 'power2.out'
     }, 0.3);
 
@@ -2012,7 +2015,7 @@ function initCaseStudyPageGsapAnimations() {
     caseHeroTL.from(heroTitle, {
       y: 35,
       opacity: 0,
-      duration: 0.85,
+      duration: 0.35,
       ease: 'power3.out'
     }, 0.35);
   }
@@ -2023,7 +2026,7 @@ function initCaseStudyPageGsapAnimations() {
     caseHeroTL.from(heroDivider, {
       scaleY: 0,
       transformOrigin: 'center center',
-      duration: 0.8,
+      duration: 0.35,
       ease: 'power2.inOut'
     }, 0.35);
   }
@@ -2034,7 +2037,7 @@ function initCaseStudyPageGsapAnimations() {
     caseHeroTL.from(heroDesc, {
       y: 25,
       opacity: 0,
-      duration: 0.8,
+      duration: 0.35,
       ease: 'power3.out'
     }, 0.5);
   }
@@ -2058,7 +2061,7 @@ function initCaseStudyPageGsapAnimations() {
     caseHeroTL.from(statsStrip, {
       y: 25,
       opacity: 0,
-      duration: 0.7,
+      duration: 0.35,
       ease: 'power3.out'
     }, 0.7);
   }
@@ -2099,7 +2102,7 @@ function initCaseStudyPageGsapAnimations() {
       opacity: 0,
       y: 10,
       duration: 0.6,
-      stagger: 0.1,
+      stagger: 0.05,
       ease: 'power2.out'
     }, 1.1);
   }
@@ -2108,12 +2111,12 @@ function initCaseStudyPageGsapAnimations() {
   // 2. Interactive 3D Parallax Mouse Physics
   // =========================================================================
   if (window.matchMedia('(hover: hover) and (min-width: 1024px)').matches) {
-    const setChipX = gsap.quickTo(floatingChips, 'x', { duration: 0.7, ease: 'power2.out' });
-    const setChipY = gsap.quickTo(floatingChips, 'y', { duration: 0.7, ease: 'power2.out' });
-    const setMatrixX = gsap.quickTo(dotMatrices, 'x', { duration: 0.85, ease: 'power2.out' });
-    const setMatrixY = gsap.quickTo(dotMatrices, 'y', { duration: 0.85, ease: 'power2.out' });
-    const setWireTLX = wireframeTL ? gsap.quickTo(wireframeTL, 'x', { duration: 0.8, ease: 'power2.out' }) : null;
-    const setWireTLY = wireframeTL ? gsap.quickTo(wireframeTL, 'y', { duration: 0.8, ease: 'power2.out' }) : null;
+    const setChipX = gsap.quickTo(floatingChips, 'x', { duration: 0.35, ease: 'power2.out' });
+    const setChipY = gsap.quickTo(floatingChips, 'y', { duration: 0.35, ease: 'power2.out' });
+    const setMatrixX = gsap.quickTo(dotMatrices, 'x', { duration: 0.35, ease: 'power2.out' });
+    const setMatrixY = gsap.quickTo(dotMatrices, 'y', { duration: 0.35, ease: 'power2.out' });
+    const setWireTLX = wireframeTL ? gsap.quickTo(wireframeTL, 'x', { duration: 0.35, ease: 'power2.out' }) : null;
+    const setWireTLY = wireframeTL ? gsap.quickTo(wireframeTL, 'y', { duration: 0.35, ease: 'power2.out' }) : null;
 
     caseHero.addEventListener('mousemove', (e) => {
       const rect = caseHero.getBoundingClientRect();
@@ -2176,7 +2179,7 @@ function initCaseStudyPageGsapAnimations() {
         gsap.from(filterPills, {
           scrollTrigger: {
             trigger: filterSection,
-            start: 'top 85%',
+            start: 'top 92%',
             toggleActions: 'play none none none'
           },
           y: 20,
@@ -2192,7 +2195,7 @@ function initCaseStudyPageGsapAnimations() {
         gsap.from(filterFeedback, {
           scrollTrigger: {
             trigger: filterSection,
-            start: 'top 85%',
+            start: 'top 92%',
             toggleActions: 'play none none none'
           },
           opacity: 0,
@@ -2221,7 +2224,7 @@ function initCaseStudyPageGsapAnimations() {
           x: isEven ? -30 : 30,
           opacity: 0,
           scale: 0.96,
-          duration: 0.75,
+          duration: 0.35,
           ease: 'power3.out'
         });
 
@@ -2297,7 +2300,7 @@ function initCaseStudyPageGsapAnimations() {
         y: 30,
         opacity: 0,
         scale: 0.95,
-        duration: 0.7,
+        duration: 0.35,
         ease: 'power3.out'
       });
     }
@@ -2310,7 +2313,7 @@ function initCaseStudyPageGsapAnimations() {
       const ctaTL = gsap.timeline({
         scrollTrigger: {
           trigger: ctaStrip,
-          start: 'top 82%',
+          start: 'top 92%',
           toggleActions: 'play none none none'
         }
       });
@@ -2333,7 +2336,7 @@ function initCaseStudyPageGsapAnimations() {
         ctaTL.from(ctaTitle, {
           y: 35,
           opacity: 0,
-          duration: 0.7,
+          duration: 0.35,
           ease: 'power3.out'
         }, 0.1);
       }
@@ -2369,7 +2372,7 @@ function initCaseStudyPageGsapAnimations() {
         gsap.from(contactCard, {
           scrollTrigger: {
             trigger: contactSection,
-            start: 'top 80%',
+            start: 'top 92%',
             toggleActions: 'play none none none'
           },
           y: 60,
@@ -2385,7 +2388,7 @@ function initCaseStudyPageGsapAnimations() {
         gsap.from(contactFormElements, {
           scrollTrigger: {
             trigger: contactSection,
-            start: 'top 75%',
+            start: 'top 92%',
             toggleActions: 'play none none none'
           },
           y: 20,
@@ -2403,13 +2406,13 @@ function initCaseStudyPageGsapAnimations() {
         gsap.from(contactDetails, {
           scrollTrigger: {
             trigger: contactSection,
-            start: 'top 75%',
+            start: 'top 92%',
             toggleActions: 'play none none none'
           },
           x: 30,
           opacity: 0,
           duration: 0.55,
-          stagger: 0.1,
+          stagger: 0.05,
           delay: 0.5,
           ease: 'power2.out'
         });
@@ -2504,7 +2507,7 @@ function initBlogPageGsapAnimations() {
   if (heroTitle) {
     blogHeroTL.fromTo(heroTitle,
       { y: 30, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.85, ease: 'power3.out', clearProps: 'opacity,transform' },
+      { y: 0, opacity: 1, duration: 0.35, ease: 'power3.out', clearProps: 'opacity,transform' },
       0.28
     );
   }
@@ -2513,7 +2516,7 @@ function initBlogPageGsapAnimations() {
   if (heroDesc) {
     blogHeroTL.fromTo(heroDesc,
       { y: 20, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.75, ease: 'power3.out', clearProps: 'opacity,transform' },
+      { y: 0, opacity: 1, duration: 0.35, ease: 'power3.out', clearProps: 'opacity,transform' },
       0.42
     );
   }
@@ -2570,13 +2573,13 @@ function initBlogPageGsapAnimations() {
       gsap.from(subhero.querySelectorAll('.blog-subhero-heading, .blog-subhero-desc'), {
         scrollTrigger: {
           trigger: subhero,
-          start: 'top 85%',
+          start: 'top 92%',
           toggleActions: 'play none none none'
         },
         y: 30,
         opacity: 0,
-        duration: 0.8,
-        stagger: 0.15,
+        duration: 0.35,
+        stagger: 0.05,
         ease: 'power2.out',
         clearProps: 'opacity,transform'
       });
@@ -2588,12 +2591,12 @@ function initBlogPageGsapAnimations() {
       gsap.from(filterSection.querySelector('.blog-controls-bar'), {
         scrollTrigger: {
           trigger: filterSection,
-          start: 'top 85%',
+          start: 'top 92%',
           toggleActions: 'play none none none'
         },
         y: 25,
         opacity: 0,
-        duration: 0.7,
+        duration: 0.35,
         ease: 'power2.out',
         clearProps: 'opacity,transform'
       });
@@ -2605,13 +2608,13 @@ function initBlogPageGsapAnimations() {
       gsap.from(blogCards, {
         scrollTrigger: {
           trigger: '.blog-grid-section',
-          start: 'top 80%',
+          start: 'top 92%',
           toggleActions: 'play none none none'
         },
         y: 40,
         opacity: 0,
-        duration: 0.8,
-        stagger: 0.1,
+        duration: 0.35,
+        stagger: 0.05,
         ease: 'power2.out',
         clearProps: 'opacity,transform'
       });
@@ -2654,7 +2657,7 @@ function initCareerPageGsapAnimations() {
   if (heroTitle) {
     careerHeroTL.fromTo(heroTitle,
       { y: 30, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.85, ease: 'power3.out', clearProps: 'opacity,transform' },
+      { y: 0, opacity: 1, duration: 0.35, ease: 'power3.out', clearProps: 'opacity,transform' },
       0.28
     );
   }
@@ -2663,7 +2666,7 @@ function initCareerPageGsapAnimations() {
   if (heroDesc) {
     careerHeroTL.fromTo(heroDesc,
       { y: 20, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.75, ease: 'power3.out', clearProps: 'opacity,transform' },
+      { y: 0, opacity: 1, duration: 0.35, ease: 'power3.out', clearProps: 'opacity,transform' },
       0.42
     );
   }
@@ -2710,112 +2713,3 @@ function initCareerPageGsapAnimations() {
     });
   }
 }
-
-// =============================================================================
-// Case Study Page Hero GSAP Animations (Matching About Page Theme)
-// =============================================================================
-function initCaseStudyPageGsapAnimations() {
-  if (typeof gsap === 'undefined') return;
-
-  const caseHero = document.querySelector('.casestudy-hero-section');
-  if (!caseHero) return;
-
-  // DOM References
-  const heroEyebrow = caseHero.querySelector('.casestudy-hero-eyebrow') || caseHero.querySelector('.casestudy-eyebrow-row');
-  const heroTitle = caseHero.querySelector('.casestudy-hero-title');
-  const heroDesc = caseHero.querySelector('.casestudy-hero-desc');
-  const heroActions = caseHero.querySelector('.casestudy-hero-actions');
-  const btnExplore = document.getElementById('btn-explore-cases') || document.getElementById('hero-scroll-btn');
-
-  // =========================================================================
-  // 1. Hero Section Opening Timeline Orchestration
-  // =========================================================================
-  const caseHeroTL = gsap.timeline({ defaults: { ease: 'power3.out' } });
-
-  // A. Eyebrow Entrance
-  if (heroEyebrow) {
-    caseHeroTL.fromTo(heroEyebrow,
-      { y: 16, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out', clearProps: 'opacity,transform' },
-      0.15
-    );
-  }
-
-  // B. Main Title Reveal
-  if (heroTitle) {
-    caseHeroTL.fromTo(heroTitle,
-      { y: 30, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.85, ease: 'power3.out', clearProps: 'opacity,transform' },
-      0.28
-    );
-  }
-
-  // C. Description Reveal
-  if (heroDesc) {
-    caseHeroTL.fromTo(heroDesc,
-      { y: 20, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.75, ease: 'power3.out', clearProps: 'opacity,transform' },
-      0.42
-    );
-  }
-
-  // D. Action Buttons Entrance
-  if (heroActions) {
-    caseHeroTL.fromTo(heroActions,
-      { y: 16, opacity: 0, scale: 0.96 },
-      { y: 0, opacity: 1, scale: 1, duration: 0.55, ease: 'back.out(1.4)', clearProps: 'opacity,transform,scale' },
-      0.55
-    );
-  }
-
-  // =========================================================================
-  // 2. Smooth Scrolling for Case Study Action Buttons
-  // =========================================================================
-  if (btnExplore) {
-    btnExplore.addEventListener('click', (e) => {
-      const target = document.getElementById('cases-section');
-      if (target) {
-        e.preventDefault();
-        const headerOffset = 90;
-        const targetPos = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
-        window.scrollTo({
-          top: targetPos,
-          behavior: 'smooth'
-        });
-      }
-    });
-  }
-
-  // =========================================================================
-  // 3. Stats Numbers Counter Animation
-  // =========================================================================
-  const statNumbers = document.querySelectorAll('.casestudy-hero-stats .stat-number');
-  if (statNumbers.length > 0 && typeof ScrollTrigger !== 'undefined') {
-    ScrollTrigger.create({
-      trigger: '.casestudy-stats-section',
-      start: 'top 85%',
-      once: true,
-      onEnter: () => {
-        statNumbers.forEach(stat => {
-          const targetStr = stat.getAttribute('data-target');
-          if (!targetStr) return;
-          const targetVal = parseFloat(targetStr);
-          const suffix = stat.getAttribute('data-suffix') || '';
-          const decimals = parseInt(stat.getAttribute('data-decimals') || '0', 10);
-          const obj = { val: 0 };
-
-          gsap.to(obj, {
-            val: targetVal,
-            duration: 1.6,
-            ease: 'power2.out',
-            onUpdate: () => {
-              stat.textContent = (decimals > 0 ? obj.val.toFixed(decimals) : Math.round(obj.val)) + suffix;
-            }
-          });
-        });
-      }
-    });
-  }
-}
-
-

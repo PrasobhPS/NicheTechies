@@ -56,11 +56,31 @@ export default function StaticPage(props) {
   }, [html, navigate]);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     if (inlineScript) {
       runInlineScript(inlineScript);
     }
+
     window.initNicheGlobalSite?.();
-    window.scrollTo(0, 0);
+
+    const rafId = requestAnimationFrame(() => {
+      if (window.ScrollTrigger) {
+        window.ScrollTrigger.refresh();
+      }
+    });
+
+    const root = containerRef.current;
+    if (root) {
+      const images = root.querySelectorAll('img');
+      images.forEach((img) => {
+        if (!img.complete) {
+          img.addEventListener('load', () => window.ScrollTrigger?.refresh(), { once: true });
+        }
+      });
+    }
+
+    return () => cancelAnimationFrame(rafId);
   }, [html, inlineScript]);
 
   return <div ref={containerRef} dangerouslySetInnerHTML={{ __html: html || '' }} />;

@@ -1,0 +1,555 @@
+/**
+ * =============================================================================
+ * Common Unified Responsive Stylesheet (All Pages)
+ * Handles responsive typography, section spacing, grid collapsing, and containers.
+ * =============================================================================
+ */
+
+/* -----------------------------------------------------------------------------
+   1. Unified Hero Section Titles (Tablet & Mobile)
+   ----------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .hero-title,
+  .about-hero-title,
+  .service-hero-title,
+  .casestudy-hero-title,
+  .career-hero-title,
+  .contact-hero-title,
+  .blog-hero-title,
+  .blog-detail-title,
+  .job-main-title,
+  .project-hero-title,
+  .gallery-hero-title {
+    font-size: clamp(1.95rem, 4.2vw, 2.65rem) !important;
+    line-height: 1.18 !important;
+    letter-spacing: -0.03em !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title,
+  .about-hero-title,
+  .service-hero-title,
+  .casestudy-hero-title,
+  .career-hero-title,
+  .contact-hero-title,
+  .blog-hero-title,
+  .blog-detail-title,
+  .job-main-title,
+  .project-hero-title,
+  .gallery-hero-title {
+    font-size: clamp(1.65rem, 6.2vw, 2.05rem) !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.028em !important;
+    margin-bottom: 0.85rem !important;
+    word-break: break-word;
+  }
+
+  .hero-description,
+  .about-hero-desc,
+  .service-hero-desc,
+  .casestudy-hero-desc,
+  .career-hero-desc,
+  .contact-hero-desc,
+  .blog-hero-desc {
+    font-size: 0.92rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1.35rem !important;
+    max-width: 100% !important;
+  }
+
+  .hero-eyebrow-tech,
+  .about-hero-eyebrow,
+  .about-hero-badge,
+  .service-hero-eyebrow,
+  .casestudy-hero-eyebrow,
+  .career-hero-eyebrow,
+  .contact-hero-eyebrow,
+  .blog-hero-eyebrow {
+    font-size: 0.72rem !important;
+    letter-spacing: 0.12em !important;
+    margin-bottom: 0.6rem !important;
+  }
+
+  .hero-cta-group,
+  .about-hero-actions,
+  .service-hero-actions,
+  .career-hero-actions,
+  .casestudy-hero-actions,
+  .blog-hero-actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.75rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .hero-cta-group a,
+  .about-hero-actions a,
+  .service-hero-actions a,
+  .career-hero-actions a,
+  .casestudy-hero-actions a,
+  .blog-hero-actions a {
+    min-height: 44px !important;
+    padding: 0.65rem 1.35rem !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title,
+  .about-hero-title,
+  .service-hero-title,
+  .casestudy-hero-title,
+  .career-hero-title,
+  .contact-hero-title,
+  .blog-hero-title,
+  .blog-detail-title,
+  .job-main-title,
+  .project-hero-title,
+  .gallery-hero-title {
+    font-size: clamp(1.48rem, 6.8vw, 1.75rem) !important;
+    line-height: 1.22 !important;
+    letter-spacing: -0.025em !important;
+  }
+
+  .hero-cta-group,
+  .about-hero-actions,
+  .service-hero-actions,
+  .career-hero-actions {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  .hero-cta-group a,
+  .about-hero-actions a,
+  .service-hero-actions a,
+  .career-hero-actions a {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   2. Unified Remaining Section Headings (All Non-Hero Section Titles)
+   ----------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .section-title,
+  .section-heading,
+  .section-main-title,
+  .about-title,
+  .about-main-title,
+  .services-header .section-title,
+  .services-overview-section .section-title,
+  .process-intro .process-title,
+  .build-title,
+  .solutions-main-title,
+  .product-section-title,
+  .foundation-main-title,
+  .foundation-panel-title,
+  .about-values-intro .values-title,
+  .values-title,
+  .tech-main-title,
+  .culture-main-title,
+  .positions-heading,
+  .casestudy-section-title,
+  .blog-header h2,
+  .blog-subhero-heading,
+  .testimonials-header h2,
+  .testimonials-intro h2,
+  .section-center-header .section-title {
+    font-size: clamp(1.65rem, 3.4vw, 2.15rem) !important;
+    line-height: 1.22 !important;
+    letter-spacing: -0.025em !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title,
+  .section-heading,
+  .section-main-title,
+  .about-title,
+  .about-main-title,
+  .services-header .section-title,
+  .services-overview-section .section-title,
+  .process-intro .process-title,
+  .build-title,
+  .solutions-main-title,
+  .product-section-title,
+  .foundation-main-title,
+  .foundation-panel-title,
+  .about-values-intro .values-title,
+  .values-title,
+  .tech-main-title,
+  .culture-main-title,
+  .positions-heading,
+  .casestudy-section-title,
+  .blog-header h2,
+  .blog-subhero-heading,
+  .testimonials-header h2,
+  .testimonials-intro h2,
+  .section-center-header .section-title {
+    font-size: clamp(1.35rem, 5.2vw, 1.72rem) !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.025em !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  /* Card Sub-Headings */
+  .service-card .service-name,
+  .service-card h3,
+  .value-card h3,
+  .val-title,
+  .timeline-step .step-name,
+  .build-card h3,
+  .solution-pillar-card h3,
+  .casestudy-card h3,
+  .blog-card h3,
+  .testimonial-card h3,
+  .perk-card h3,
+  .pillar-card h3,
+  .job-title {
+    font-size: clamp(1.02rem, 3.8vw, 1.2rem) !important;
+    line-height: 1.32 !important;
+    letter-spacing: -0.015em !important;
+  }
+
+  /* Section Descriptions & Subtitles */
+  .section-desc,
+  .section-subtitle,
+  .about-description,
+  .process-desc,
+  .values-desc,
+  .foundation-panel-desc,
+  .services-intro-text,
+  .product-section-subtitle,
+  .blog-subhero-desc {
+    font-size: 0.915rem !important;
+    line-height: 1.62 !important;
+    max-width: 100% !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  /* Section Eyebrows */
+  .section-eyebrow,
+  .build-eyebrow .eyebrow-text,
+  .values-eyebrow,
+  .foundation-eyebrow,
+  .foundation-panel-eyebrow,
+  .product-eyebrow,
+  .contact-eyebrow {
+    font-size: 0.72rem !important;
+    letter-spacing: 0.12em !important;
+    margin-bottom: 0.45rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title,
+  .section-heading,
+  .section-main-title,
+  .about-title,
+  .about-main-title,
+  .services-header .section-title,
+  .services-overview-section .section-title,
+  .process-intro .process-title,
+  .build-title,
+  .solutions-main-title,
+  .product-section-title,
+  .foundation-main-title,
+  .foundation-panel-title,
+  .about-values-intro .values-title,
+  .values-title,
+  .tech-main-title,
+  .culture-main-title,
+  .positions-heading,
+  .casestudy-section-title,
+  .blog-header h2,
+  .blog-subhero-heading,
+  .testimonials-header h2,
+  .testimonials-intro h2,
+  .section-center-header .section-title {
+    font-size: clamp(1.22rem, 5.6vw, 1.48rem) !important;
+    line-height: 1.26 !important;
+    letter-spacing: -0.02em !important;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   3. Unified Section Spacing & Padding (Removes desktop 100px+ gaps)
+   ----------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .about-section,
+  .services-section,
+  .process-section,
+  .product-section,
+  .blog-section,
+  .what-we-build-section,
+  .career-positions-section,
+  .casestudy-filter-section,
+  .about-foundation-section,
+  .about-values-section,
+  .about-technologies-section,
+  .about-culture-section,
+  .services-overview-section,
+  .contact-main-section,
+  .testimonials-section {
+    padding-top: 3.5rem !important;
+    padding-bottom: 3.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section,
+  .services-section,
+  .process-section,
+  .product-section,
+  .blog-section,
+  .what-we-build-section,
+  .career-positions-section,
+  .casestudy-filter-section,
+  .about-foundation-section,
+  .about-values-section,
+  .about-technologies-section,
+  .about-culture-section,
+  .services-overview-section,
+  .contact-main-section,
+  .testimonials-section {
+    padding-top: 2.75rem !important;
+    padding-bottom: 2.75rem !important;
+  }
+
+  /* Remove excessive section header margins */
+  .services-header,
+  .build-header,
+  .product-section-header,
+  .foundation-header,
+  .blog-header,
+  .positions-top-bar,
+  .section-center-header {
+    margin-bottom: 1.75rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section,
+  .services-section,
+  .process-section,
+  .product-section,
+  .blog-section,
+  .what-we-build-section,
+  .career-positions-section,
+  .casestudy-filter-section,
+  .about-foundation-section,
+  .about-values-section,
+  .about-technologies-section,
+  .about-culture-section,
+  .services-overview-section,
+  .contact-main-section,
+  .testimonials-section {
+    padding-top: 2.25rem !important;
+    padding-bottom: 2.25rem !important;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   4. Unified Container Padding & Safe Margins
+   ----------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .container,
+  .header-container,
+  .aboutpage-container,
+  .service-container,
+  .casestudy-container,
+  .contact-container,
+  .blog-container,
+  .jobdetail-container,
+  .project-container,
+  .build-container,
+  .process-container,
+  .product-container,
+  .about-container,
+  .culture-reel-container {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container,
+  .header-container,
+  .aboutpage-container,
+  .service-container,
+  .casestudy-container,
+  .contact-container,
+  .blog-container,
+  .jobdetail-container,
+  .project-container,
+  .build-container,
+  .process-container,
+  .product-container,
+  .about-container,
+  .culture-reel-container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   5. Unified Grid Collapsing & Card Padding on Mobile
+   ----------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .services-grid,
+  .about-values-grid,
+  .service-matrix-grid,
+  .casestudy-grid,
+  .blog-grid,
+  .perks-grid,
+  .testimonials-grid,
+  .build-grid,
+  .deliverables-grid,
+  .tech-category-grid,
+  .culture-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.15rem !important;
+  }
+
+  /* Safe Card Padding on Mobile */
+  .service-card,
+  .value-card,
+  .casestudy-card,
+  .blog-card,
+  .perk-card,
+  .testimonial-card,
+  .build-card,
+  .solution-pillar-card,
+  .pillar-card {
+    padding: 1.35rem 1.25rem !important;
+    border-radius: 14px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* About section visual card */
+  .about-section .about-container {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .about-card {
+    height: 260px !important;
+  }
+
+  /* Process Timeline */
+  .process-container {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .process-timeline {
+    padding-left: 1.5rem !important;
+  }
+
+  .process-timeline::before {
+    left: calc(1.5rem + 14px) !important;
+  }
+
+  .timeline-step {
+    gap: 1rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  /* Foundation Tabs Navigation on Mobile */
+  .foundation-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+  }
+
+  .foundation-tabs {
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    white-space: nowrap !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    padding: 0.25rem !important;
+  }
+
+  .foundation-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .foundation-panel-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  /* Stats Row in Foundation Panel */
+  .foundation-stats-row {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.5rem !important;
+  }
+
+  .foundation-stat-box {
+    padding: 0.75rem 0.4rem !important;
+  }
+
+  /* Filter Bars on Mobile */
+  .service-filter-bar,
+  .casestudy-filter-section .category-pills-list,
+  .blog-controls-bar {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    white-space: nowrap !important;
+    flex-wrap: nowrap !important;
+    padding-bottom: 0.35rem !important;
+  }
+
+  .service-filter-bar::-webkit-scrollbar,
+  .category-pills-list::-webkit-scrollbar,
+  .blog-controls-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Contact Hub Card */
+  .contact-hub-card {
+    grid-template-columns: 1fr !important;
+    border-radius: 16px !important;
+  }
+
+  .hub-info-panel {
+    padding: 1.75rem 1.35rem !important;
+    gap: 1.5rem !important;
+  }
+
+  .hub-form-panel {
+    padding: 1.75rem 1.35rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .foundation-stats-row {
+    grid-template-columns: 1fr !important;
+    gap: 0.5rem !important;
+  }
+
+  .foundation-stat-box {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    text-align: left !important;
+    padding: 0.75rem 1rem !important;
+  }
+
+  .service-card,
+  .value-card,
+  .casestudy-card,
+  .blog-card {
+    padding: 1.15rem 1rem !important;
+  }
+}
+
