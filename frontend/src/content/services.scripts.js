@@ -11,7 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
           });
           btn.classList.add('active');
           btn.setAttribute('aria-selected', 'true');
-          btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+          const bar = btn.closest('.service-filter-bar') || btn.parentElement;
+          if (bar) {
+            const targetScroll = btn.offsetLeft - (bar.clientWidth / 2) + (btn.offsetWidth / 2);
+            bar.scrollTo({ left: Math.max(0, targetScroll), behavior: 'smooth' });
+          }
 
           const category = btn.getAttribute('data-filter') || 'all';
 

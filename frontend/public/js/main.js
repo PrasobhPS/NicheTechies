@@ -374,8 +374,15 @@ function initBlogFilter() {
       pill.classList.add('active');
       pill.setAttribute('aria-selected', 'true');
 
-      // Smoothly scroll active pill into view in mobile slider
-      pill.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      // Smoothly scroll active pill into view in mobile slider (container-only without moving page)
+      const pillsContainer = pill.closest('.category-pills-list') || pill.parentElement;
+      if (pillsContainer) {
+        const targetScroll = pill.offsetLeft - (pillsContainer.clientWidth / 2) + (pill.offsetWidth / 2);
+        pillsContainer.scrollTo({
+          left: Math.max(0, targetScroll),
+          behavior: 'smooth'
+        });
+      }
 
       // Animate card display
       cards.forEach(card => {
@@ -463,22 +470,33 @@ function initProductStackedDeck() {
       // Explicit z-index ensuring subsequent cards cleanly layer on top
       card.style.zIndex = (i + 1) * 10;
 
-      // Scale down previous card slightly as next card covers it (NO OPACITY or FILTER to keep text 100% sharp and solid)
+      // Pin each card (except the last) until the deck finishes
       if (i < cards.length - 1) {
+        ScrollTrigger.create({
+          trigger: card,
+          start: 'top 86px',
+          endTrigger: '.product-cards-deck',
+          end: 'bottom bottom',
+          pin: true,
+          pinSpacing: false
+        });
+
         const nextCard = cards[i + 1];
         const cardInner = card.querySelector('.card-inner');
 
-        gsap.to(cardInner, {
-          scale: 0.96 - (cards.length - 1 - i) * 0.02,
-          transformOrigin: 'top center',
-          ease: 'none',
-          scrollTrigger: {
-            trigger: nextCard,
-            start: 'top top+=260',
-            end: 'top top+=86',
-            scrub: true
-          }
-        });
+        if (cardInner && nextCard) {
+          gsap.to(cardInner, {
+            scale: 0.96 - (cards.length - 1 - i) * 0.02,
+            transformOrigin: 'top center',
+            ease: 'none',
+            scrollTrigger: {
+              trigger: nextCard,
+              start: 'top top+=260',
+              end: 'top 86px',
+              scrub: true
+            }
+          });
+        }
       }
 
       // Stagger elements inside each card as it arrives
@@ -1336,8 +1354,19 @@ function initAboutPageGsapAnimations() {
         tab.classList.add('active');
         tab.setAttribute('aria-selected', 'true');
 
-        // Smoothly scroll active tab into view in mobile slider
-        tab.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        // Smoothly scroll active tab into view in mobile slider (container-only without moving page)
+        if (foundationTabsContainer) {
+          const targetScroll = tab.offsetLeft - (foundationTabsContainer.clientWidth / 2) + (tab.offsetWidth / 2);
+          foundationTabsContainer.scrollTo({
+            left: Math.max(0, targetScroll),
+            behavior: 'smooth'
+          });
+        }
+
+        // Prevent accidental horizontal window shift
+        if (window.scrollX !== 0) {
+          window.scrollTo(0, window.scrollY);
+        }
 
         foundationPanels.forEach((panel) => {
           if (panel.id === `panel-${targetTab}`) {
@@ -1622,8 +1651,15 @@ function initAboutPageGsapAnimations() {
           filterPills.forEach((p) => p.classList.remove('active'));
           pill.classList.add('active');
 
-          // Smoothly scroll active pill into view in mobile slider
-          pill.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+          // Smoothly scroll active pill into view in mobile slider (container-only without moving page)
+          const pillsContainer = pill.closest('.culture-filter-pills') || pill.parentElement;
+          if (pillsContainer) {
+            const targetScroll = pill.offsetLeft - (pillsContainer.clientWidth / 2) + (pill.offsetWidth / 2);
+            pillsContainer.scrollTo({
+              left: Math.max(0, targetScroll),
+              behavior: 'smooth'
+            });
+          }
 
           const allCards = track.querySelectorAll('.culture-reel-card');
           const visible = [];

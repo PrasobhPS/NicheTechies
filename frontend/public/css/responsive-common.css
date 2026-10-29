@@ -9,6 +9,7 @@
    1. Unified Hero Section Titles (Tablet & Mobile)
    ----------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
+
   .hero-title,
   .about-hero-title,
   .service-hero-title,
@@ -27,6 +28,7 @@
 }
 
 @media (max-width: 768px) {
+
   .hero-title,
   .about-hero-title,
   .service-hero-title,
@@ -96,6 +98,7 @@
 }
 
 @media (max-width: 480px) {
+
   .hero-title,
   .about-hero-title,
   .service-hero-title,
@@ -133,6 +136,7 @@
    2. Unified Remaining Section Headings (All Non-Hero Section Titles)
    ----------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
+
   .section-title,
   .section-heading,
   .section-main-title,
@@ -164,6 +168,7 @@
 }
 
 @media (max-width: 768px) {
+
   .section-title,
   .section-heading,
   .section-main-title,
@@ -244,6 +249,7 @@
 }
 
 @media (max-width: 480px) {
+
   .section-title,
   .section-heading,
   .section-main-title,
@@ -278,6 +284,7 @@
    3. Unified Section Spacing & Padding (Removes desktop 100px+ gaps)
    ----------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
+
   .about-section,
   .services-section,
   .process-section,
@@ -299,6 +306,7 @@
 }
 
 @media (max-width: 768px) {
+
   .about-section,
   .services-section,
   .process-section,
@@ -331,6 +339,7 @@
 }
 
 @media (max-width: 480px) {
+
   .about-section,
   .services-section,
   .process-section,
@@ -355,6 +364,7 @@
    4. Unified Container Padding & Safe Margins
    ----------------------------------------------------------------------------- */
 @media (max-width: 768px) {
+
   .container,
   .header-container,
   .aboutpage-container,
@@ -378,6 +388,7 @@
 }
 
 @media (max-width: 480px) {
+
   .container,
   .header-container,
   .aboutpage-container,
@@ -401,6 +412,7 @@
    5. Unified Grid Collapsing & Card Padding on Mobile
    ----------------------------------------------------------------------------- */
 @media (max-width: 768px) {
+
   .services-grid,
   .about-values-grid,
   .service-matrix-grid,
@@ -553,3 +565,478 @@
   }
 }
 
+/* -----------------------------------------------------------------------------
+   6. Executive Premium Hero Section Overlays (Responsive / Mobile)
+   Replaces washed-out milky white with high-contrast pearl-slate clarity &
+   deep sapphire-tech aura on the upper right (highlights architectural lights).
+   ----------------------------------------------------------------------------- */
+/* @media (max-width: 768px) {
+  .service-hero-section {
+    background-image: 
+      radial-gradient(ellipse 75% 55% at 92% 16%, rgba(15, 28, 58, 0.28) 0%, rgba(26, 43, 75, 0.14) 45%, transparent 75%),
+      radial-gradient(ellipse 50% 35% at 88% 30%, rgba(2, 132, 199, 0.10) 0%, transparent 60%),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.88) 45%, rgba(248, 251, 255, 0.65) 75%, rgba(235, 244, 255, 0.35) 100%),
+      linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.10) 50%, rgba(244, 247, 252, 0.70) 80%, #ffffff 100%),
+      url('../assets/images/service-banner.jpeg') !important;
+    background-position: 70% center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    padding: 6.75rem 0 3.5rem !important;
+  }
+
+  .about-hero-section {
+    background-image: 
+      radial-gradient(ellipse 75% 55% at 92% 16%, rgba(15, 28, 58, 0.28) 0%, rgba(26, 43, 75, 0.14) 45%, transparent 75%),
+      radial-gradient(ellipse 50% 35% at 88% 30%, rgba(2, 132, 199, 0.10) 0%, transparent 60%),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.88) 45%, rgba(248, 251, 255, 0.65) 75%, rgba(235, 244, 255, 0.35) 100%),
+      linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.10) 50%, rgba(244, 247, 252, 0.70) 80%, #ffffff 100%),
+      url('../assets/images/about-banner.jpeg') !important;
+    background-position: 70% center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    padding: 6.75rem 0 3.5rem !important;
+  }
+
+  .career-hero-section {
+    background-image: 
+      radial-gradient(ellipse 75% 55% at 92% 16%, rgba(15, 28, 58, 0.28) 0%, rgba(26, 43, 75, 0.14) 45%, transparent 75%),
+      radial-gradient(ellipse 50% 35% at 88% 30%, rgba(2, 132, 199, 0.10) 0%, transparent 60%),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.88) 45%, rgba(248, 251, 255, 0.65) 75%, rgba(235, 244, 255, 0.35) 100%),
+      linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.10) 50%, rgba(244, 247, 252, 0.70) 80%, #ffffff 100%),
+      url('../assets/images/career-banner.jpeg') !important;
+    background-position: 70% center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    padding: 6.75rem 0 3.5rem !important;
+  }
+
+  .casestudy-hero-section {
+    background-image: 
+      radial-gradient(ellipse 75% 55% at 92% 16%, rgba(15, 28, 58, 0.28) 0%, rgba(26, 43, 75, 0.14) 45%, transparent 75%),
+      radial-gradient(ellipse 50% 35% at 88% 30%, rgba(2, 132, 199, 0.10) 0%, transparent 60%),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.88) 45%, rgba(248, 251, 255, 0.65) 75%, rgba(235, 244, 255, 0.35) 100%),
+      linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.10) 50%, rgba(244, 247, 252, 0.70) 80%, #ffffff 100%),
+      url('../assets/images/casestudy-banner.jpeg') !important;
+    background-position: 70% center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    padding: 6.75rem 0 3.5rem !important;
+  }
+
+  .contact-hero-section {
+    background-image: 
+      radial-gradient(ellipse 75% 55% at 92% 16%, rgba(15, 28, 58, 0.28) 0%, rgba(26, 43, 75, 0.14) 45%, transparent 75%),
+      radial-gradient(ellipse 50% 35% at 88% 30%, rgba(2, 132, 199, 0.10) 0%, transparent 60%),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.88) 45%, rgba(248, 251, 255, 0.65) 75%, rgba(235, 244, 255, 0.35) 100%),
+      linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.10) 50%, rgba(244, 247, 252, 0.70) 80%, #ffffff 100%),
+      url('../assets/images/contact-banner.jpeg') !important;
+    background-position: 70% center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    padding: 6.75rem 0 3.5rem !important;
+  }
+
+  .blog-hero-section {
+    background-image: 
+      radial-gradient(ellipse 75% 55% at 92% 16%, rgba(15, 28, 58, 0.28) 0%, rgba(26, 43, 75, 0.14) 45%, transparent 75%),
+      radial-gradient(ellipse 50% 35% at 88% 30%, rgba(2, 132, 199, 0.10) 0%, transparent 60%),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.88) 45%, rgba(248, 251, 255, 0.65) 75%, rgba(235, 244, 255, 0.35) 100%),
+      linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.10) 50%, rgba(244, 247, 252, 0.70) 80%, #ffffff 100%),
+      url('../assets/images/blog-banner.jpg') !important;
+    background-position: 70% center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    padding: 6.75rem 0 3.5rem !important;
+  }
+
+  .hero-bg-layer::after {
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: 
+      radial-gradient(ellipse 75% 55% at 92% 16%, rgba(15, 28, 58, 0.28) 0%, rgba(26, 43, 75, 0.14) 45%, transparent 75%),
+      radial-gradient(ellipse 50% 35% at 88% 30%, rgba(2, 132, 199, 0.10) 0%, transparent 60%),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.88) 45%, rgba(248, 251, 255, 0.65) 75%, rgba(235, 244, 255, 0.35) 100%),
+      linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.10) 50%, rgba(244, 247, 252, 0.70) 80%, #ffffff 100%) !important;
+    pointer-events: none !important;
+    z-index: 5 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-hero-section {
+    background-image: 
+      radial-gradient(ellipse 85% 50% at 95% 12%, rgba(15, 28, 58, 0.24) 0%, rgba(26, 43, 75, 0.12) 45%, transparent 75%),
+      radial-gradient(circle at 88% 26%, rgba(2, 132, 199, 0.08) 0%, transparent 55%),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.90) 55%, rgba(248, 251, 255, 0.75) 80%, rgba(238, 246, 255, 0.45) 100%),
+      linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.15) 50%, rgba(244, 247, 252, 0.80) 82%, #ffffff 100%),
+      url('../assets/images/service-banner.jpeg') !important;
+    background-position: 72% center !important;
+  }
+
+  .about-hero-section {
+    background-image: 
+      radial-gradient(ellipse 85% 50% at 95% 12%, rgba(15, 28, 58, 0.24) 0%, rgba(26, 43, 75, 0.12) 45%, transparent 75%),
+      radial-gradient(circle at 88% 26%, rgba(2, 132, 199, 0.08) 0%, transparent 55%),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.90) 55%, rgba(248, 251, 255, 0.75) 80%, rgba(238, 246, 255, 0.45) 100%),
+      linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.15) 50%, rgba(244, 247, 252, 0.80) 82%, #ffffff 100%),
+      url('../assets/images/about-banner.jpeg') !important;
+    background-position: 72% center !important;
+  }
+
+  .career-hero-section {
+    background-image: 
+      radial-gradient(ellipse 85% 50% at 95% 12%, rgba(15, 28, 58, 0.24) 0%, rgba(26, 43, 75, 0.12) 45%, transparent 75%),
+      radial-gradient(circle at 88% 26%, rgba(2, 132, 199, 0.08) 0%, transparent 55%),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.90) 55%, rgba(248, 251, 255, 0.75) 80%, rgba(238, 246, 255, 0.45) 100%),
+      linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.15) 50%, rgba(244, 247, 252, 0.80) 82%, #ffffff 100%),
+      url('../assets/images/career-banner.jpeg') !important;
+    background-position: 72% center !important;
+  }
+
+  .casestudy-hero-section {
+    background-image: 
+      radial-gradient(ellipse 85% 50% at 95% 12%, rgba(15, 28, 58, 0.24) 0%, rgba(26, 43, 75, 0.12) 45%, transparent 75%),
+      radial-gradient(circle at 88% 26%, rgba(2, 132, 199, 0.08) 0%, transparent 55%),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.90) 55%, rgba(248, 251, 255, 0.75) 80%, rgba(238, 246, 255, 0.45) 100%),
+      linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.15) 50%, rgba(244, 247, 252, 0.80) 82%, #ffffff 100%),
+      url('../assets/images/casestudy-banner.jpeg') !important;
+    background-position: 72% center !important;
+  }
+
+  .contact-hero-section {
+    background-image: 
+      radial-gradient(ellipse 85% 50% at 95% 12%, rgba(15, 28, 58, 0.24) 0%, rgba(26, 43, 75, 0.12) 45%, transparent 75%),
+      radial-gradient(circle at 88% 26%, rgba(2, 132, 199, 0.08) 0%, transparent 55%),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.90) 55%, rgba(248, 251, 255, 0.75) 80%, rgba(238, 246, 255, 0.45) 100%),
+      linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.15) 50%, rgba(244, 247, 252, 0.80) 82%, #ffffff 100%),
+      url('../assets/images/contact-banner.jpeg') !important;
+    background-position: 72% center !important;
+  }
+
+  .blog-hero-section {
+    background-image: 
+      radial-gradient(ellipse 85% 50% at 95% 12%, rgba(15, 28, 58, 0.24) 0%, rgba(26, 43, 75, 0.12) 45%, transparent 75%),
+      radial-gradient(circle at 88% 26%, rgba(2, 132, 199, 0.08) 0%, transparent 55%),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.90) 55%, rgba(248, 251, 255, 0.75) 80%, rgba(238, 246, 255, 0.45) 100%),
+      linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.15) 50%, rgba(244, 247, 252, 0.80) 82%, #ffffff 100%),
+      url('../assets/images/blog-banner.jpg') !important;
+    background-position: 72% center !important;
+  }
+
+
+/* -----------------------------------------------------------------------------
+   7. Contact Section ('Empowering growth through tech talent')
+   Desktop/Tablet: Equal width col-6 / col-6 (50% / 50%) with lady image full cover.
+   Mobile: Form appears FIRST, followed by full-width lady image (equal 100% width).
+   ----------------------------------------------------------------------------- */
+.contact-section {
+  width: 100% !important;
+  max-width: 100% !important;
+  background-color: #0b192e !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.contact-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Desktop and Tablet: 50% / 50% (col-6 col-6) equal columns with sleek compact height */
+@media (min-width: 768px) {
+  .contact-card-box {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    /* Equal width col-6 col-6 */
+    align-items: stretch !important;
+    width: 100% !important;
+    min-height: 360px !important;
+    max-height: 420px !important;
+    height: 400px !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    background-color: #0b192e !important;
+    overflow: hidden !important;
+  }
+
+  .contact-visual {
+    order: 1 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 420px !important;
+    background-color: #0c1e36 !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+
+  .contact-visual img {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 10% !important;
+    display: block !important;
+  }
+
+  .contact-main-wrapper {
+    order: 2 !important;
+    width: 100% !important;
+    max-height: 420px !important;
+    box-sizing: border-box !important;
+    padding: 2rem 2.75rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 0.85rem !important;
+  }
+
+  .contact-subtitle {
+    margin-bottom: 0.85rem !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact-card-box {
+    height: 600px !important;
+    max-height: 600px !important;
+  }
+
+  .contact-main-wrapper {
+    padding: 2.25rem 3.5rem !important;
+  }
+}
+
+/* Mobile View: Form FIRST, lady image SECOND, both 100% equal full width */
+@media (max-width: 767px) {
+  .contact-card-box {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    background-color: #0b192e !important;
+  }
+
+  /* 1. Form & Content Column FIRST */
+  .contact-main-wrapper {
+    order: 1 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 2.75rem 1.5rem !important;
+  }
+
+  /* 2. Portrait Photo Column SECOND */
+  .contact-visual {
+    order: 2 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 340px !important;
+    min-height: 340px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    background-color: #0c1e36 !important;
+    position: relative !important;
+  }
+
+  .contact-visual img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 14% !important;
+    display: block !important;
+  }
+
+  .contact-form-col {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .contact-title {
+    width: 100% !important;
+    font-size: clamp(1.65rem, 5.8vw, 2.05rem) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0.65rem !important;
+  }
+
+  .contact-subtitle {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 1.5rem !important;
+    font-size: 0.88rem !important;
+    line-height: 1.55 !important;
+  }
+
+  /* Equal width form elements */
+  .contact-form {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.85rem !important;
+  }
+
+  .contact-form .form-row {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0.85rem !important;
+  }
+
+  .contact-form .form-group {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .contact-form .form-input {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 48px !important;
+    box-sizing: border-box !important;
+    font-size: 0.88rem !important;
+    border-radius: 9px !important;
+  }
+
+  .btn-submit {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 48px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-top: 0.35rem !important;
+    border-radius: 9999px !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-main-wrapper {
+    padding: 2.25rem 1.15rem !important;
+  }
+
+  .contact-visual {
+    height: 290px !important;
+    min-height: 290px !important;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   8. Footer Responsive Text Wrapping & Layout Fixes
+   Prevents text clipping, horizontal page overflow, and awkward line breaks.
+   ----------------------------------------------------------------------------- */
+html,
+body {
+  overflow-x: clip !important;
+  max-width: 100vw !important;
+}
+
+.site-root {
+  overflow-x: clip !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+}
+
+.site-footer {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+.footer-container {
+  width: 100% !important;
+  max-width: 1440px !important;
+  box-sizing: border-box !important;
+}
+
+.office-address,
+.office-address-single {
+  white-space: normal !important;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  max-width: 100% !important;
+}
+
+@media (min-width: 1280px) {
+  .office-address-single {
+    white-space: nowrap !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 3.5rem 0 2.5rem !important;
+  }
+
+  .footer-divider-line {
+    margin: 2.5rem 0 2rem !important;
+  }
+
+  .footer-offices-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem !important;
+  }
+
+  .office-col.border-left {
+    border-left: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border-top: 1px solid #dbe3ed !important;
+    padding-top: 1.5rem !important;
+  }
+
+  .footer-bottom-bar {
+    margin-top: 2.5rem !important;
+    gap: 1rem !important;
+  }
+
+  .footer-legal-links {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.65rem 1.25rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-footer {
+    padding: 2.75rem 0 2rem !important;
+  }
+
+  .footer-container {
+    padding: 0 1rem !important;
+  }
+
+  .footer-top-grid {
+    gap: 2rem !important;
+  }
+
+  .office-address {
+    font-size: 0.84rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .footer-copyright {
+    font-size: 0.8rem !important;
+  }
+
+  .footer-legal-links {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.5rem 1rem !important;
+  }
+
+  .footer-legal-links a {
+    font-size: 0.8rem !important;
+  }
+}
