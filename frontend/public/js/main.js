@@ -2212,19 +2212,7 @@ function initCaseStudyPageGsapAnimations() {
       const filterFeedback = filterSection.querySelector('.filter-feedback');
 
       if (filterPills.length > 0) {
-        gsap.from(filterPills, {
-          scrollTrigger: {
-            trigger: filterSection,
-            start: 'top 92%',
-            toggleActions: 'play none none none'
-          },
-          y: 20,
-          opacity: 0,
-          scale: 0.92,
-          duration: 0.5,
-          stagger: 0.06,
-          ease: 'back.out(1.4)'
-        });
+        gsap.set(filterPills, { clearProps: 'opacity,transform,scale,y' });
       }
 
       if (filterFeedback) {

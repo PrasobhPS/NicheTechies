@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+(() => {
       // 1. Back to Top Ring & Scroll Progress
       const backToTopBtn = document.getElementById('back-to-top');
       const progressRingFill = document.querySelector('.progress-ring-fill');
@@ -78,4 +78,4 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
       });
-    });
+    })();

@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+(() => {
       // 1. Reading Progress Bar
       const progressBar = document.getElementById('reading-progress-bar');
       const updateReadingProgress = () => {
@@ -97,4 +97,4 @@ document.addEventListener('DOMContentLoaded', () => {
           });
         });
       }
-    });
+    })();

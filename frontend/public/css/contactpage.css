@@ -194,6 +194,15 @@
   margin-bottom: 1.25rem;
 }
 
+@media (max-width: 640px) {
+  .contact-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.75rem;
+  }
+}
+
 .contact-hero-actions .btn-contact-primary {
   display: inline-flex;
   align-items: center;

@@ -117,7 +117,7 @@ export default function SiteHeader() {
           <Link to="/careers" onClick={closeMenu}>Careers</Link>
           <Link to="/contact" onClick={closeMenu}>Contact</Link>
         </div>
-        <div>
+        <div className="mobile-drawer-footer">
           <Link to="/contact" className="btn-talk w-full justify-center" onClick={closeMenu}>
             <span>Get in Touch</span>
             <ArrowIcon />

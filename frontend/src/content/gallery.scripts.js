@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+(() => {
       // Interactive Lightbox Logic
       const cards = Array.from(document.querySelectorAll('.bento-card'));
       const lightbox = document.getElementById('gallery-lightbox');
@@ -62,4 +62,4 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'ArrowLeft') showPrev();
         if (e.key === 'ArrowRight') showNext();
       });
-    });
+    })();
