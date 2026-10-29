@@ -87,7 +87,7 @@
 @media (max-width: 768px) {
   .blog-hero-section {
     background-image: 
-      linear-gradient(180deg, rgba(255, 255, 255, 0.99) 0%, rgba(255, 255, 255, 0.95) 55%, rgba(240, 245, 252, 0.9) 85%, #f4f7fb 100%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.52) 45%, rgba(240, 245, 252, 0.75) 80%, rgba(244, 247, 251, 0.92) 100%),
       url('../assets/images/blog-banner.jpg');
     background-position: center center;
     padding: 6.75rem 0 3.5rem;

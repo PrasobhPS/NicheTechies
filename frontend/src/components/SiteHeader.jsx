@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 
 const navItems = [
@@ -24,10 +25,51 @@ function ArrowIcon() {
 }
 
 export default function SiteHeader() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Close mobile menu on browser back / forward navigation
+  useEffect(() => {
+    const handlePopState = () => {
+      setIsMenuOpen(false);
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  // Lock body scroll and handle escape key when mobile menu is open
+  useEffect(() => {
+    if (!isMenuOpen) {
+      document.body.style.overflow = '';
+      return undefined;
+    }
+
+    document.body.style.overflow = 'hidden';
+
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setIsMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isMenuOpen]);
+
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="site-header" id="site-header">
       <div className="header-container">
-        <Link to="/" className="brand-logo" aria-label="Niche Techies Home">
+        <Link to="/" className="brand-logo" aria-label="Niche Techies Home" onClick={closeMenu}>
           <img src="/assets/images/logo.png" alt="Niche Techies" className="brand-logo-img" />
         </Link>
 
@@ -45,31 +87,38 @@ export default function SiteHeader() {
         </nav>
 
         <div className="header-actions">
-          <Link to="/contact" className="btn-talk" id="btn-header-talk">
+          <Link to="/contact" className="btn-talk" id="btn-header-talk" onClick={closeMenu}>
             <span>Get in Touch</span>
             <ArrowIcon />
           </Link>
 
-          <button type="button" className="mobile-menu-btn" aria-label="Toggle Navigation Menu">
-            <span />
-            <span />
-            <span />
+          <button
+            type="button"
+            className={`mobile-menu-btn${isMenuOpen ? ' open' : ''}`}
+            aria-label="Toggle Navigation Menu"
+            aria-expanded={isMenuOpen}
+            onClick={toggleMenu}
+            data-menu-bound="true"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
         </div>
       </div>
 
-      <div className="nav-mobile-drawer">
+      <div className={`nav-mobile-drawer${isMenuOpen ? ' open' : ''}`}>
         <div className="mobile-links">
-          <Link to="/#home">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/case-studies">Case Studies</Link>
-          <Link to="/blog">Blog</Link>
-          <Link to="/careers">Careers</Link>
-          <Link to="/contact">Contact</Link>
+          <Link to="/" onClick={closeMenu}>Home</Link>
+          <Link to="/about" onClick={closeMenu}>About</Link>
+          <Link to="/services" onClick={closeMenu}>Services</Link>
+          <Link to="/case-studies" onClick={closeMenu}>Case Studies</Link>
+          <Link to="/blog" onClick={closeMenu}>Blog</Link>
+          <Link to="/careers" onClick={closeMenu}>Careers</Link>
+          <Link to="/contact" onClick={closeMenu}>Contact</Link>
         </div>
         <div>
-          <Link to="/contact" className="btn-talk w-full justify-center">
+          <Link to="/contact" className="btn-talk w-full justify-center" onClick={closeMenu}>
             <span>Get in Touch</span>
             <ArrowIcon />
           </Link>

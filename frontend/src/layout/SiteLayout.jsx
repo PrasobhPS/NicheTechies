@@ -1,11 +1,11 @@
-import { Outlet, useLocation } from 'react-router-dom';
+import React from 'react';
+import { Outlet } from 'react-router-dom';
 import SiteHeader from '../components/SiteHeader';
 import SiteFooter from '../components/SiteFooter';
 import BackToTop from '../components/BackToTop';
 import useExternalScripts from '../hooks/useExternalScripts';
 
 export default function SiteLayout() {
-  const location = useLocation();
   const scriptsReady = useExternalScripts();
 
   if (!scriptsReady) {
@@ -17,7 +17,7 @@ export default function SiteLayout() {
   }
 
   return (
-    <div key={location.pathname} className="site-root">
+    <div className="site-root">
       <SiteHeader />
       <main>
         <Outlet />

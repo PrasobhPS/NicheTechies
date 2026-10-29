@@ -106,35 +106,6 @@
       handleHeaderScroll();
     }
 
-    // 3. Mobile Menu Toggle
-    const mobileBtn = document.querySelector('.mobile-menu-btn');
-    const mobileDrawer = document.querySelector('.nav-mobile-drawer');
-    const mobileLinks = document.querySelectorAll('.mobile-links a');
-    if (mobileBtn && mobileDrawer) {
-      mobileBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const isOpen = mobileBtn.classList.toggle('open');
-        mobileDrawer.classList.toggle('open', isOpen);
-        document.body.style.overflow = isOpen ? 'hidden' : '';
-      });
-
-      mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          mobileBtn.classList.remove('open');
-          mobileDrawer.classList.remove('open');
-          document.body.style.overflow = '';
-        });
-      });
-
-      document.addEventListener('click', (e) => {
-        if (mobileDrawer.classList.contains('open') && !mobileDrawer.contains(e.target) && !mobileBtn.contains(e.target)) {
-          mobileBtn.classList.remove('open');
-          mobileDrawer.classList.remove('open');
-          document.body.style.overflow = '';
-        }
-      });
-    }
-
     // 4. Back to Top Scroll Behavior
     const backToTopBtn = document.getElementById('back-to-top');
     const progressCircle = document.getElementById('progress-circle');

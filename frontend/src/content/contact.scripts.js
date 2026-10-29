@@ -1,32 +1,4 @@
-// 1. Mobile Menu Drawer Toggle
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navDrawer = document.querySelector('.nav-mobile-drawer');
-    const contactMobileLinks = document.querySelectorAll('.mobile-links a');
 
-    if (mobileMenuBtn && navDrawer) {
-      mobileMenuBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const isOpen = mobileMenuBtn.classList.toggle('open');
-        navDrawer.classList.toggle('open', isOpen);
-        document.body.style.overflow = isOpen ? 'hidden' : '';
-      });
-
-      contactMobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          mobileMenuBtn.classList.remove('open');
-          navDrawer.classList.remove('open');
-          document.body.style.overflow = '';
-        });
-      });
-
-      document.addEventListener('click', (e) => {
-        if (navDrawer.classList.contains('open') && !navDrawer.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-          mobileMenuBtn.classList.remove('open');
-          navDrawer.classList.remove('open');
-          document.body.style.overflow = '';
-        }
-      });
-    }
 
     // 2. FAQ Accordion Toggle
     const faqTriggers = document.querySelectorAll('.faq-trigger');
