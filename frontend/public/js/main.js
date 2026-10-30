@@ -5,8 +5,13 @@
 
 function initNicheGlobalSite() {
   if (typeof ScrollTrigger !== 'undefined') {
-    ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    
+    ScrollTrigger.getAll().forEach((trigger) => trigger.kill(true));
+  }
+
+  if (typeof gsap !== 'undefined') {
+    gsap.set('.contact-card-box, .contact-eyebrow, .contact-title, .contact-subtitle, .contact-form .form-group, .btn-submit, .contact-detail-item', {
+      clearProps: 'opacity,transform,visibility'
+    });
   }
 
   initStickyHeader();
@@ -1192,18 +1197,21 @@ function initGsapAnimations() {
     const contactSection = document.querySelector('.contact-section');
     if (contactBox && contactSection) {
       if (window.innerWidth >= 768) {
-        gsap.from(contactBox, {
-          scrollTrigger: {
-            trigger: contactSection,
-            start: 'top 92%',
-            once: true
-          },
-          y: 25,
-          opacity: 0,
-          duration: 0.35,
-          ease: 'power2.out',
-          clearProps: 'all'
-        });
+        gsap.fromTo(contactBox,
+          { y: 25, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.35,
+            ease: 'power2.out',
+            clearProps: 'all',
+            scrollTrigger: {
+              trigger: contactSection,
+              start: 'top 92%',
+              once: true
+            }
+          }
+        );
       } else {
         contactBox.style.opacity = '1';
         contactBox.style.visibility = 'visible';
@@ -1904,7 +1912,8 @@ function initCaseStudyPageGsapAnimations() {
   if (typeof gsap === 'undefined') return;
 
   const caseHero = document.querySelector('.casestudy-hero-section');
-  if (!caseHero) return;
+  if (!caseHero || caseHero.dataset.gsapReady === '1') return;
+  caseHero.dataset.gsapReady = '1';
 
   if (typeof ScrollTrigger !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
@@ -2393,35 +2402,43 @@ function initCaseStudyPageGsapAnimations() {
     if (contactSection) {
       const contactCard = contactSection.querySelector('.contact-card-box');
       if (contactCard) {
-        gsap.from(contactCard, {
-          scrollTrigger: {
-            trigger: contactSection,
-            start: 'top 92%',
-            toggleActions: 'play none none none'
-          },
-          y: 60,
-          opacity: 0,
-          duration: 0.9,
-          ease: 'power3.out'
-        });
+        gsap.fromTo(contactCard,
+          { y: 60, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.9,
+            ease: 'power3.out',
+            clearProps: 'all',
+            scrollTrigger: {
+              trigger: contactSection,
+              start: 'top 92%',
+              toggleActions: 'play none none none'
+            }
+          }
+        );
       }
 
       // Stagger the contact form elements
       const contactFormElements = contactSection.querySelectorAll('.contact-eyebrow, .contact-title, .contact-subtitle, .form-group, .btn-submit');
       if (contactFormElements.length > 0) {
-        gsap.from(contactFormElements, {
-          scrollTrigger: {
-            trigger: contactSection,
-            start: 'top 92%',
-            toggleActions: 'play none none none'
-          },
-          y: 20,
-          opacity: 0,
-          duration: 0.5,
-          stagger: 0.07,
-          delay: 0.3,
-          ease: 'power2.out'
-        });
+        gsap.fromTo(contactFormElements,
+          { y: 20, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.5,
+            stagger: 0.07,
+            delay: 0.3,
+            ease: 'power2.out',
+            clearProps: 'opacity,transform',
+            scrollTrigger: {
+              trigger: contactSection,
+              start: 'top 92%',
+              toggleActions: 'play none none none'
+            }
+          }
+        );
       }
 
       // Contact details slide in from right
