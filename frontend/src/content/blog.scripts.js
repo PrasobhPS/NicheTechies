@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+(() => {
       const tabButtons = document.querySelectorAll('.blog-filter-tabs .tab-btn');
       const blogCards = Array.from(document.querySelectorAll('.blog-grid .blog-card'));
       const searchInput = document.getElementById('blog-search-input');
@@ -238,4 +238,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Initial run
       filterAndPaginate(true);
-    });
+    })();

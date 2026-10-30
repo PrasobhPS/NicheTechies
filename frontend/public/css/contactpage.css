@@ -194,6 +194,17 @@
   margin-bottom: 1.25rem;
 }
 
+@media (max-width: 640px) {
+  .contact-hero-actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    gap: 0.65rem 0.85rem;
+  }
+}
+
 .contact-hero-actions .btn-contact-primary {
   display: inline-flex;
   align-items: center;
@@ -252,7 +263,7 @@
 }
 
 .contact-hero-actions .btn-contact-secondary:hover svg {
-  transform: translateY(2px);
+  transform: translateX(3px);
 }
 
 .contact-hero-actions .btn-contact-secondary svg {

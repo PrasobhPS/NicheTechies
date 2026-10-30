@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+(() => {
       // 1. Category Filtering for Services
       const filterButtons = document.querySelectorAll('.filter-pill');
       const serviceCards = document.querySelectorAll('.service-saas-card');
@@ -52,4 +52,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
 
-    });
+    })();

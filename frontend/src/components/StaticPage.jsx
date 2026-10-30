@@ -3,10 +3,38 @@ import { useNavigate } from 'react-router-dom';
 
 function runInlineScript(source) {
   if (!source || !source.trim()) return;
-  const script = document.createElement('script');
-  script.text = source;
-  document.body.appendChild(script);
-  script.remove();
+
+  const origAddEventListener = document.addEventListener;
+  const deferredHandlers = [];
+
+  document.addEventListener = function (type, listener, options) {
+    if (type === 'DOMContentLoaded' && document.readyState !== 'loading') {
+      deferredHandlers.push(listener);
+      return;
+    }
+    return origAddEventListener.call(document, type, listener, options);
+  };
+
+  try {
+    const script = document.createElement('script');
+    script.text = source;
+    document.body.appendChild(script);
+    script.remove();
+  } finally {
+    document.addEventListener = origAddEventListener;
+  }
+
+  deferredHandlers.forEach((handler) => {
+    try {
+      if (typeof handler === 'function') {
+        handler(new Event('DOMContentLoaded'));
+      } else if (handler && typeof handler.handleEvent === 'function') {
+        handler.handleEvent(new Event('DOMContentLoaded'));
+      }
+    } catch (e) {
+      console.error('Error executing deferred script handler:', e);
+    }
+  });
 }
 
 export default function StaticPage(props) {

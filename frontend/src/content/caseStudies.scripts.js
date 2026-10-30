@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+(() => {
       // 1. Sticky Header
       const header = document.querySelector('.site-header');
       if (header) {
@@ -140,4 +140,4 @@ document.addEventListener('DOMContentLoaded', () => {
           });
         });
       }
-    });
+    })();

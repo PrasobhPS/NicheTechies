@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+(() => {
       // 1. Smooth Apply Button Scroll
       const heroApplyBtn = document.getElementById('btn-hero-apply');
       if (heroApplyBtn) {
@@ -64,4 +64,4 @@ document.addEventListener('DOMContentLoaded', () => {
           }, 800);
         });
       }
-    });
+    })();
